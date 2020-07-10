@@ -14,9 +14,23 @@ section {
   padding: 3% 1%;
 }
 
+#navbarSupportedContent {
+  font-size: 20px;
+  transition: font-size 0.3s ease-in-out;
+}
+
+#navbarSupportedContent.shrink {
+  font-size: 16px;
+}
+
 #logo {
-  height: 50px;
+  height: 80px;
   width: auto;
+  transition: height 0.3s ease-in-out; /* Adds a transition effect when height changed */
+}
+
+#logo.shrink {
+  height: 50px;
 }
 
 .circle-icon {
