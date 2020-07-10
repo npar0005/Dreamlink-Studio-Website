@@ -1,6 +1,20 @@
 /*--- Hero image ---*/
 .home-inner {
-  background-image: linear-gradient( rgba(4, 12, 109, 0.5), rgba(70, 236, 255, 0.187) ), url("../images/jumbotron-bg.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("../images/jumbotron-bg.png");
+}
+
+.caption {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  top: 38%;
+  color: white;
+  z-index: 1;
+}
+
+.caption h1 {
+  letter-spacing: 0.15rem;
+  text-shadow: 0.1rem 0.1rem 1.5rem black;
 }
 
 

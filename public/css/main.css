@@ -1,12 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Source+Sans+Pro:wght@300&display=swap');
 
-* {
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
 html, body {
-  height: 100%;
-  width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  overflow-x: hidden;
 }
 
 h1, h2,  h3, h4, h5, h6 {
@@ -23,15 +19,6 @@ section {
   width: auto;
 }
 
-.jumbotron-fluid {
-  background-image: linear-gradient( rgba(4, 12, 109, 0.5), rgba(70, 236, 255, 0.187) ), url("../images/jumbotron-bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 550px;
-  background-attachment: fixed;
-  color: white;
-}
-
 .circle-icon {
   display: inline-block;
   border-radius: 200px;
@@ -46,3 +33,6 @@ section {
   background: #b1b1b1;
 }
 
+.navbar {
+  background: rgba(255, 255, 255);
+}

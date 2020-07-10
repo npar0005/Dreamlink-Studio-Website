@@ -1,3 +1,8 @@
+/*
+  Code from: https://www.youtube.com/watch?v=V_lAhqLXT9A&ab_channel=DrewRyan
+*/
+
+
 /*--- Extra Bootstrap Column Padding --*/
 [class*="col-"] {
   padding: 1rem;
