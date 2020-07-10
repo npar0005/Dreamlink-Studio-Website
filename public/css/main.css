@@ -13,24 +13,44 @@ section {
   border-top: 0.2px solid rgb(203, 203, 203);
   padding: 3% 1%;
 }
+.nav-link {
+  color: white !important;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: background-color 0.4s ease-in-out;
+  -ms-transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.navbar.shrink {
+  background-color: rgba(255, 255, 255, 1);
+}
 
 #navbarSupportedContent {
   font-size: 20px;
-  transition: font-size 0.3s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 #navbarSupportedContent.shrink {
   font-size: 16px;
 }
 
+#navbarSupportedContent.shrink .nav-link {
+  color: black !important;
+}
+
 #logo {
   height: 80px;
+  filter: brightness(0) invert(1);
   width: auto;
-  transition: height 0.3s ease-in-out; /* Adds a transition effect when height changed */
+  transition: 0.4s ease-in-out; /* Adds a transition effect when height changed */
 }
 
 #logo.shrink {
   height: 50px;
+  filter: brightness(1) invert(0)
 }
 
 .circle-icon {
@@ -47,6 +67,4 @@ section {
   background: #b1b1b1;
 }
 
-.navbar {
-  background: rgba(255, 255, 255);
-}
+
