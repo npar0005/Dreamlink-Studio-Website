@@ -13,9 +13,8 @@ section {
   border-top: 0.2px solid rgb(203, 203, 203);
   padding: 3% 1%;
 }
-.nav-link {
-  color: white !important;
-}
+
+/*--- Nav ---*/
 
 .navbar {
   background-color: rgba(255, 255, 255, 0);
@@ -53,6 +52,20 @@ section {
   filter: brightness(1) invert(0)
 }
 
+.nav-link {
+  color: white !important;
+  transition: color 0.4s ease-in-out;
+}
+
+.active .nav-link {
+  font-weight: 700;
+}
+
+.nav-link:hover {
+  color: rgb(205, 205, 235) !important;
+}
+
+/*--- Utility ---*/
 .circle-icon {
   display: inline-block;
   border-radius: 200px;
