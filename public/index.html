@@ -17,9 +17,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js" integrity="sha512-M+hXwltZ3+0nFQJiVke7pqXY7VdtWW2jVG31zrml+eteTP7im25FdwtLhIBTWkaHRQyPrhO2uy8glLMHZzhFog==" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" />
 
+  <!-- Owl carousel -->
+  <link rel="stylesheet" href="libs/owl/dist/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="libs/owl/dist/assets/owl.theme.default.min.css" />
+  <script src="libs/owl/dist/owl.carousel.min.js"></script>
+
   <!-- Page JS -->
   <script src="js/nav.js"></script>
+  <script src="js/carousel.js"></script>
   <script src="js/script.js"></script>
+
   <!-- Page Styles -->
   <link rel="stylesheet" href="css/fixed.css" />
   <link rel="stylesheet" href="css/main.css" />
@@ -28,33 +35,35 @@
 <body>
   <main id="home">
     <!-- Start Navigation -->
-    <nav class="navbar navbar-expand-md navbar-light fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/logo.png" id="logo" alt="Dreamlink Studio Logo" />
-        </a>
-        <button type="button" class="navbar-toggler outline-none" data-toggle="collapse" data-target="#navbarSupportedContent">
-          <span class="text-white navbar-toggler-icon"></span>
-        </button>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" id="logo" alt="Dreamlink Studio Logo" />
+          </a>
+          <button type="button" class="navbar-toggler outline-none" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="text-white navbar-toggler-icon"></span>
+          </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active px-3">
-              <a href="index.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item px-3">
-              <a href="about.html" class="nav-link">About Us</a>
-            </li>
-            <li class="nav-item px-3">
-              <a href="products.html" class="nav-link">Products</a>
-            </li>
-            <li class="nav-item px-3">
-              <a href="contact.html" class="nav-link">Contact</a>
-            </li>
-          </ul>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active px-3">
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item px-3">
+                <a href="about.html" class="nav-link">About Us</a>
+              </li>
+              <li class="nav-item px-3">
+                <a href="products.html" class="nav-link">Products</a>
+              </li>
+              <li class="nav-item px-3">
+                <a href="contact.html" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
     <!-- End Navigation -->
 
     <!-- Start hero image -->
@@ -75,7 +84,7 @@
   <!-- What we do -->
   <section id="what-we-do">
     <h1 class="display-5 text-center font-weight-light text-capitalize">What we do</h1>
-    <div class="container text-center">
+    <div class="container text-center mt-4">
       <p>We deliver and produce high qualitty applications. Our focus is on games but we plan on expanding our applications to cover general purpose software. Our team focuse on three core values, quality, creativity and innovation. These core ideas act as the core building blocks for our applications and software. This allows our applications and software unique, and unlike any other technologies out there.</p>  
     </div>
 
@@ -135,12 +144,72 @@
 
   <section>
     <h1 class="display-5 text-center font-weight-light text-capitalize">Who we are</h1>
-    <div class="container text-center">
+    <div class="container text-center mt-4">
       <p>We are a group of passionate IT professionals who ... Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Scroll through the slider below to meet the team, and see how each individual member has helped contribute to where we are today.</p>  
     </div>
     <hr class="sep" />
     <div class="container">
-      <h3 class="text-center text-capitalize">Our team</h3>
+      <h3 class="text-center text-capitalize mt-3 mb-5">Our team</h3>
+
+      <!-- Our team -->
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="member-info">
+            <img src="images/team/placeholder.png" class="circle-img" alt="John Doe" />
+            <h4>John Doe</h4>
+            <p>Developer</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="member-info">
+            <img src="images/team/placeholder.png" class="circle-img" alt="John Doe" />
+            <h4>John Doe</h4>
+            <p>Developer</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="member-info">
+            <img src="images/team/placeholder.png" class="circle-img" alt="John Doe" />
+            <h4>John Doe</h4>
+            <p>Developer</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="member-info">
+            <img src="images/team/placeholder.png" class="circle-img" alt="John Doe" />
+            <h4>John Doe</h4>
+            <p>Developer</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="member-info">
+            <img src="images/team/placeholder.png" class="circle-img" alt="John Doe" />
+            <h4>John Doe</h4>
+            <p>Developer</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="member-info">
+            <img src="images/team/placeholder.png" class="circle-img" alt="John Doe" />
+            <h4>John Doe</h4>
+            <p>Developer</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="member-info">
+            <img src="images/team/placeholder.png" class="circle-img" alt="John Doe" />
+            <h4>John Doe</h4>
+            <p>Developer</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="member-info">
+            <img src="images/team/placeholder.png" class="circle-img" alt="John Doe" />
+            <h4>John Doe</h4>
+            <p>Developer</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </body>
@@ -148,29 +217,3 @@
 
 
 
-<!-- Our products -->
-<!--div id="carousel-controls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="container px-5">
-        <p>XY</p>
-        <p>AB</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="container px-5">
-        <p>Foo</p>
-        <p>Bar</p>
-      </div>
-    </div>
-  </div>
-
-  <a class="carousel-control-prev" href="#carousel-controls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carousel-controls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div-->
