@@ -18,19 +18,7 @@
 }
 
 
-/*--- Carousel left and right buttons ---*/
-/*.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
- }
- 
- .carousel-control-next-icon {
-   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
- }
-
- .carousel-control-next, .carousel-control-prev {
-   width: auto;
- }*/
-
+/*--- Owl carousel cards ---*/
 .member-info .circle-img {
   border-radius: 100px;
   height: 120px;
@@ -41,49 +29,100 @@
 
 .owl-stage-outer {
   padding-top: 30px;
-  padding-bottom: 35px;
+  padding-bottom: 20px;
 }
 
 .owl-carousel .item {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*border: 0.2px solid lightgray;*/
-  border-radius: 4px;
-  padding: 5%;
   background: white;
   margin-bottom: 20px;
   height: 300px;
-  /*-webkit-box-shadow: 10px 10px 15px -12px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 15px -12px rgba(0,0,0,0.75);
-  box-shadow: 10px 10px 15px -12px rgba(0,0,0,0.75);
-  */
-  -webkit-box-shadow: -2px 2px 36px -12px rgba(0,0,0,0.75);
-  -moz-box-shadow: -2px 2px 36px -12px rgba(0,0,0,0.75);
-  box-shadow: -2px 2px 36px -12px rgba(0,0,0,0.75);
 }
 
 
 .member-info {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
+/*--- Owl carousel flip cards ---*/
+.flip-card {
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  padding: 5%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front {
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+
+/* Style the back side */
+.flip-card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  background-color: rgb(212,53,28);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+/*--- Owl carousel next and prev buttons ---*/
 .owl-prev, .owl-next {
   width: 15px;
   height: 100px;
   position: absolute;
   top: 50%;
-  font-size: 20px;
+  font-size: 30px !important;
   transform: translateY(-50%);
   display: block !important;
   border:0px solid black;
 }
-.owl-prev { left: -20px; }
-.owl-next { right: -20px; }
-.owl-prev i, .owl-next i {transform : scale(2,5); color: #ccc;}
 
+.owl-prev:hover, .owl-next:hover {
+  background: none !important;
+  color: black !important;
+}
 
+.owl-prev:focus, .owl-next:focus {
+  outline: none;
+}
+
+.owl-prev { left: -40px; }
+.owl-next { right: -40px; }
+.owl-prev i, .owl-next i {
+  transform : scale(2,5);
+  color: #ccc;
+}
 
  
