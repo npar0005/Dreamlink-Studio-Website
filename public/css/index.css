@@ -32,7 +32,7 @@
   padding-bottom: 20px;
 }
 
-.owl-carousel .item {
+.owl-profile-carousel.owl-carousel .item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,6 +123,33 @@
 .owl-prev i, .owl-next i {
   transform : scale(2,5);
   color: #ccc;
+}
+
+
+/*--- Owl Products carousel ---*/
+
+.product-info.card {
+  transform: scale(0.75);
+  width: 20rem;
+  transition: all 0.5s linear;
+  margin: 0 auto;
+}
+
+
+.center .product-info.card{
+  transform: scale(1);
+}
+
+.card .img-wrapper {
+  overflow: hidden;
+}
+
+.card .img-wrapper img {
+  transition: all 0.3s;
+}
+
+.img-wrapper img:hover {
+  transform: scale(1.1);
 }
 
  
