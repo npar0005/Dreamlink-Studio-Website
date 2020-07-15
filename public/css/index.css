@@ -131,10 +131,9 @@
 .product-info.card {
   transform: scale(0.75);
   width: 20rem;
-  transition: all 0.5s linear;
+  transition: all 0.5s linear; /* carousel minification */
   margin: 0 auto;
 }
-
 
 .center .product-info.card{
   transform: scale(1);
@@ -145,7 +144,7 @@
 }
 
 .card .img-wrapper img {
-  transition: all 0.3s;
+  transition: all 0.3s; /* image zoom */
 }
 
 .img-wrapper img:hover {

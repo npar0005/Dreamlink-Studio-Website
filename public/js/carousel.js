@@ -22,7 +22,7 @@ $(function(){
 
   $owlProducts = $(".owl-products-carousel");
   $owlProducts.owlCarousel({
-    loop: true,
+    /*loop: true,*/
     center: true,
     smartSpeed: 1000,
     nav: true,
