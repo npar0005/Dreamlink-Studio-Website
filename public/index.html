@@ -95,14 +95,41 @@
   <!-- What we do -->
   <section classs="what-we-do">
     <h1 class="display-5 text-center font-weight-light text-capitalize">What we do</h1>
-    <div class="container text-center mt-4">
+    <!--div class="container text-center mt-4">
       <p>We deliver and produce high qualitty applications. Our focus is on games but we plan on expanding our applications to cover general purpose software. Our team focuse on three core values, quality, creativity and innovation. These core ideas act as the core building blocks for our applications and software. This allows our applications and software unique, and unlike any other technologies out there.</p>  
-    </div>
+    </div-->
 
     <div class="container-fluid p-5 mt-3">
       <div class="row">
         <div class="col-lg-4">
-          <div class="container-fluid" data-aos="fade-right" data-aos-delay="100">
+          <div class="value-box" id="quality-box">
+            <div class="circle-icon">
+              <i class="fas fa-check fa-fw"></i>
+            </div>
+            <h3 class="font-weight-bold text-capitalize pt-4">Quality</h3>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="value-box" id="creative-box">
+            <div class="circle-icon">
+              <i class="fas fa-cloud fa-fw"></i>
+            </div>
+            <h3 class="font-weight-bold text-capitalize pt-4">Creativity</h3>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="value-box" id="innovation-box">
+            <div class="circle-icon">
+              <i class="fas fa-lightbulb fa-fw"></i>
+            </div>
+            <h3 class="font-weight-bold text-capitalize pt-4">Innovation</h3>
+          </div>
+        </div>
+
+        <!--div class="col-lg-4">
+          <div class="container-fluid value-box" data-aos="fade-right" data-aos-delay="100">
             <div class="row">
               <div class="col-auto">
                 <div class="circle-icon">
@@ -115,11 +142,11 @@
               </div>
             </div>
           </div>
-        </div>
+        </div-->
 
         
-        <div class="col-lg-4">
-          <div class="container-fluid" data-aos="fade-right" data-aos-delay="400">
+        <!--div class="col-lg-4">
+          <div class="container-fluid value-box" data-aos="fade-right" data-aos-delay="400">
             <div class="row">
               <div class="col-auto">
                 <div class="circle-icon">
@@ -132,10 +159,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </div-->
 
-        <div class="col-lg-4">
-          <div class="container-fluid" data-aos="fade-right" data-aos-delay="700">
+        <!--div class="col-lg-4">
+          <div class="container-fluid value-box" data-aos="fade-right" data-aos-delay="700">
             <div class="row">
               <div class="col-auto">
                 <div class="circle-icon">
@@ -148,7 +175,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div-->
       </div>
     </div>
   </section>
@@ -289,7 +316,7 @@
     <!-- Our Products -->
     <div class="container">
       <div class="owl-products-carousel owl-carousel owl-theme">
-        <div class="item">
+        <div class="item" data-aos="flip-left" data-aos-duration="800">
           <div class="product-info card shadow">
             <div class="img-wrapper">
               <img class="card-img-top" src="images/products/zombie-runner.png" alt="Zombie runner product">
@@ -301,7 +328,7 @@
             </div>
           </div>
         </div>
-        <div class="item">
+        <div class="item" data-aos="flip-left" data-aos-duration="800" data-aos-offset="200">
           <div class="product-info card shadow">
             <div class="img-wrapper">
               <img class="card-img-top" src="images/products/zombie-runner.png" alt="Zombie runner product">
@@ -313,7 +340,7 @@
             </div>
           </div>
         </div>
-        <div class="item">
+        <div class="item" data-aos="flip-left" data-aos-duration="800" data-aos-offset="400">
           <div class="product-info card shadow">
             <div class="img-wrapper">
               <img class="card-img-top" src="images/products/zombie-runner.png" alt="Zombie runner product">
@@ -325,7 +352,7 @@
             </div>
           </div>
         </div>
-        <div class="item">
+        <div class="item" data-aos="flip-left" data-aos-duration="800" data-aos-offset="600">
           <div class="product-info card shadow">
             <div class="img-wrapper">
               <img class="card-img-top" src="images/products/zombie-runner.png" alt="Zombie runner product">
@@ -337,7 +364,6 @@
             </div>
           </div>
         </div>
-   
       </div>
     </div>
   </section>
@@ -372,6 +398,18 @@
       </form>
     </div>
   </section>
+
+  <footer class="footer">
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <p>
+      <i class="fas fa-moon mr-1"></i> &copy; 2020 Dreamlink Studio</p>
+    </p>
+  </footer>
   
 </body>
 </html>
