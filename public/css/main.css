@@ -23,7 +23,7 @@ section {
 }
 
 .navbar.shrink {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #f7f7f7;/*rgba(255, 255, 255, 1);*/
   border-bottom: 1px solid rgb(212,53,28);
 }
 
@@ -48,7 +48,7 @@ section {
 }
 
 #logo.shrink {
-  height: 50px;
+  height: 40px;
   filter: brightness(1) invert(0)
 }
 
@@ -78,6 +78,10 @@ section {
   margin: 60px auto;
   width: 600px;
   background: #b1b1b1;
+}
+
+.no-resize {
+  resize: none;
 }
 
 
