@@ -2,6 +2,16 @@ const http = require("http");
 const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
+const dotevn = require("dotenv");
+dotevn.config(); // load anythign in a dotenv into an environment variable
+
+// Own modules
+const initNodeMailer = require("./mailer.js");
+const sendMail = initNodeMailer({
+  host: process.env.SMTP_HOST,
+  user: process.env.EMAIL_ADDR,
+  pass: process.env.EMAIL_PASS
+});
 
 const app = express();
 const httpServer = http.createServer(app);
@@ -17,14 +27,19 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies (for POST)
 
 app.use(express.static(path.join(__dirname, './public')));
 app.get('/', express.static(path.join(__dirname, './public')));
-app.post('/sendMail', (req, res) => {
+app.post('/sendMail', async (req, res) => {
   const {firstName, lastName, email, emailBody} = req.body;
   let error = Object.values(req.body).some(val => !val.trim());
 
   if(!error) {
-    // try and send email...
-
-    // if error, set error to false.
+    sendMail({
+      from: `Website Contact Form 🌙 <${process.env.EMAIL_ADDR}>`,
+      to: email || process.env.EMAIL_ADDR, // TODO: Change this
+      subject: `Website query from ${firstName} ${lastName}`,
+      text: `${firstName} ${lastName} has sent the following from the dreamlinkstudio.com website:\n${emailBody}`
+    })
+    .then(info => console.log(info.messageId))
+    .catch(err => console.error(err));
   }
 
   res.json({
