@@ -207,9 +207,18 @@
   transition: all 0.3s; /* image zoom */
 }
 
-.img-wrapper img:hover {
+/*.img-wrapper img:hover {
+  transform: scale(1.1);
+}*/
+.card:hover .img-wrapper img {
   transform: scale(1.1);
 }
+
+.moon-btn:hover {
+  background-color: #0a2146;
+}
+
+/*--- Contact Us ---*/
 
 .contact-us .form {
   width: 60%;
