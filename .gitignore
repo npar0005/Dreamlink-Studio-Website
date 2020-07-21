@@ -117,3 +117,4 @@ dist
 
 # DS_Store:
 .DS_Store
+public/js/.DS_Store
