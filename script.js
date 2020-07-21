@@ -23,21 +23,37 @@ httpServer.listen(PORT, () => {
 
 // Set the view template engine to use handlebars, and make it use a default layout of the file name 'main'
 // Main will be the layout which wraps everything for us. 
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
-app.set('view engine', 'handlebars');
+
+app.engine('hbs', exphbs({
+  defaultLayout: 'main', 
+  extname: 'hbs',
+  helpers: {
+      section: function(name, options){
+          if(!this._sections) this._sections = {};
+          this._sections[name] = options.fn(this);
+          return null;
+      }
+  }
+}));
+app.set('view engine', 'hbs');
+
 
 app.use(express.urlencoded({ // to support URL-encoded bodies (from forms)
   extended: true
 })); 
 
+// Needed to serve static files such as .css, images etc.
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Homepage route
 app.get('/', (req, res) => {
   res.render('index', {title: 'Home'});
 });
 
-// Needed to serve static files such as .css, images etc.
-app.use(express.static(path.join(__dirname, 'public')));
+app.get('/about-us', (req, res) => {
+  res.render('about-us', {title: 'About'});
+})
+
 
 app.post('/sendmail', (req, res, next) => {
   let error = Object.values(req.body).some(val => !val.trim());
