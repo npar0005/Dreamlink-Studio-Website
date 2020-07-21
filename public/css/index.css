@@ -214,8 +214,12 @@
   transform: scale(1.1);
 }
 
-.moon-btn:hover {
+.moon-btn:hover:not(:disabled) {
   background-color: #0a2146;
+}
+
+.moon-btn:disabled {
+  cursor: not-allowed;
 }
 
 /*--- Contact Us ---*/
