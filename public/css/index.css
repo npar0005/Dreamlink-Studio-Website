@@ -219,10 +219,16 @@
 }
 
 /*--- Contact Us ---*/
-
 .contact-us .form {
   width: 60%;
   margin: 0 auto;
+}
+
+@media(max-width: 768px) {
+  .contact-us .form {
+    width: 100%;
+    color: red;
+  }
 }
 
  

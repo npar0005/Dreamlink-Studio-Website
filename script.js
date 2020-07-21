@@ -5,7 +5,7 @@ const dotevn = require("dotenv");
 dotevn.config(); // load anythign in a dotenv into an environment variable
 
 // Own modules
-const initNodeMailer = require("./mailer.js");
+const {init: initNodeMailer, validateEmail} = require("./utils/mailer.js");
 const sendMail = initNodeMailer({
   host: process.env.SMTP_HOST,
   user: process.env.EMAIL_ADDR,
@@ -20,27 +20,34 @@ httpServer.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
 
-app.use(express.urlencoded({     // to support URL-encoded bodies (for POST)
+app.use(express.urlencoded({     // to support URL-encoded bodies (from forms)
   extended: true
 })); 
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.post('/sendMail', async (req, res) => {
-  const {firstName, lastName, email, emailBody} = req.body;
-  let error = Object.values(req.body).some(val => !val.trim());
 
-  if(!error) {
-    sendMail({
-      from: `Website Contact Form 🌙 <${process.env.EMAIL_ADDR}>`,
-      to: email || process.env.EMAIL_ADDR, // TODO: Change this
-      subject: `Website query from ${firstName} ${lastName}`,
-      text: `${firstName} ${lastName} has sent the following from the dreamlinkstudio.com website:\n${emailBody}`
-    })
-    .then(info => console.log(info.messageId))
-    .catch(err => console.error(err));
+app.post('/sendMail', (req, res, next) => {
+  let error = Object.values(req.body).some(val => !val.trim());
+  if(error) {
+    return res.json({error, msg: 'Invalid form inputs!'});
   }
 
-  res.json({
-    error
-  });
-})
+  if(!validateEmail(req.body.email)) {
+    return res.json({error: true, msg: 'Invalid email address!'});
+  }
+  next();
+}, async (req, res) => {
+  try {
+    const {firstName, lastName, email, emailBody} = req.body;
+    const info = await sendMail({
+      from: `Website Contact Form 🌙 <${process.env.EMAIL_ADDR}>`,
+      to: email || process.env.EMAIL_ADDR, // TODO: Change this
+      bcc: email,
+      subject: `Website query from ${firstName} ${lastName}`,
+      text: `${firstName} ${lastName} has sent the following from the dreamlinkstudio.com website:\n${emailBody}`
+    });
+    res.json({error: false, id: info.messageId});
+  } catch(err) {
+    res.json({error: true, msg: "Error with sending email"})
+  }
+});
