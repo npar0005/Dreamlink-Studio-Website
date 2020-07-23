@@ -54,7 +54,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-  res.render('about-us', {title: 'About', noshrink: true});
+  res.render('about', {title: 'About', noshrink: true});
 });
 
 app.get('*', (req, res) => {
