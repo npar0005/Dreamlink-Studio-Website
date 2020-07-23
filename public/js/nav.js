@@ -10,6 +10,6 @@ window.addEventListener('scroll', function() {
 
 function changeClassState(action, className) {
   shrinkSelectors.forEach(selector => {
-    document.querySelector(selector).classList[action](className);
+    document.querySelector(`${selector}`).classList[action](className);
   });
 }

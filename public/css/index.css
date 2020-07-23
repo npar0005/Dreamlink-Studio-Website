@@ -173,7 +173,6 @@
 
 
 /*--- Owl Products carousel ---*/
-
 .product-info.card {
   transform: scale(0.75);
   width: 20rem;
@@ -207,9 +206,6 @@
   transition: all 0.3s; /* image zoom */
 }
 
-/*.img-wrapper img:hover {
-  transform: scale(1.1);
-}*/
 .card:hover .img-wrapper img {
   transform: scale(1.1);
 }
@@ -220,6 +216,24 @@
 
 .moon-btn:disabled {
   cursor: not-allowed;
+}
+
+.store-buttons .store-icon {
+  color: #5f5f60;
+  transition: color 0.2s ease-in-out, transform 0.15s ease-in;
+}
+
+.store-buttons .store-icon.apple-store {
+  font-size: 30px;
+}
+
+.store-buttons .store-icon.android-store {
+  font-size: 24px;
+}
+
+.store-buttons .store-icon:hover {
+  color: #0a2146;
+  transform: scale(1.1);
 }
 
 /*--- Contact Us ---*/
