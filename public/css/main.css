@@ -2,7 +2,6 @@
 
 html, body {
   font-family: 'Source Sans Pro', sans-serif;
-  overflow-x: hidden;
 }
 
 h1, h2,  h3, h4, h5, h6 {
@@ -129,6 +128,10 @@ footer.footer .nav-links a {
 
 .no-resize {
   resize: none;
+}
+
+.no-transition {
+  transition: all 0s !important;
 }
 
 

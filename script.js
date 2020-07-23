@@ -32,6 +32,9 @@ app.engine('hbs', exphbs({
           if(!this._sections) this._sections = {};
           this._sections[name] = options.fn(this);
           return null;
+      },
+      json: function (content) {
+        return JSON.stringify(content);
       }
   }
 }));
@@ -50,8 +53,8 @@ app.get('/', (req, res) => {
   res.render('index', {title: 'Home'});
 });
 
-app.get('/about-us', (req, res) => {
-  res.render('about-us', {title: 'About'});
+app.get('/about', (req, res) => {
+  res.render('about-us', {title: 'About', noshrink: true});
 })
 
 
