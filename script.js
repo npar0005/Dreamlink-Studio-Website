@@ -55,7 +55,11 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
   res.render('about-us', {title: 'About', noshrink: true});
-})
+});
+
+app.get('*', (req, res) => {
+  res.status(404).send("Cannot find page!");
+});
 
 
 app.post('/sendmail', (req, res, next) => {
