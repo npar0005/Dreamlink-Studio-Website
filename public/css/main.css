@@ -64,6 +64,37 @@ section {
   color: rgb(205, 205, 235) !important;
 }
 
+/* Scroll Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  display: none;
+  z-index: 100;
+}
+
+.scroll-top .scroll-top-btn {
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+}
+
+.scroll-top .circle-icon {
+  background: #d4351c;
+  color: white !important;
+  opacity: 0.8;
+}
+
+.scroll-top .circle-icon .icon {
+  transform: translate(0, 0);
+  transition: transform 0.3s;
+}
+
+.scroll-top:hover .circle-icon .icon {
+  transform: translate(0, -5px);
+  transition: transform 0.3s;
+}
+
 /*--- Footer ---*/
 footer.footer {
   display: flex;
