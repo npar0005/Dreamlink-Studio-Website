@@ -15,6 +15,10 @@
   color: #0276b6; /* linked in offcial brand logo colour */
 }
 
+.our-people .profile-row {
+  margin-top: 50px !important;
+}
+
 @media(max-width: 991px) { /* lg breakpoint */
   .our-people .socials .icon {
     font-size: 30px;

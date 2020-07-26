@@ -17,3 +17,5 @@ $(window).scroll(function() {
     arrowShown = !arrowShown;
   }
 });
+
+AOS.init();
