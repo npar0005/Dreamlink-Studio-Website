@@ -1,9 +1,23 @@
+/*--- Main Heading ---*/
 .about-us .logo {
   height: auto;
   width: 70%;
 }
 
-.our-people .profile-image {
-  height: auto;
-  width: 100%;
+/*--- Our People ---*/
+
+.our-people .socials {
+  margin-top: 10px;
 }
+
+.our-people .socials .icon {
+  font-size: 20px;
+  color: #0276b6; /* linked in offcial brand logo colour */
+}
+
+@media(max-width: 991px) { /* lg breakpoint */
+  .our-people .socials .icon {
+    font-size: 30px;
+  }
+}
+
