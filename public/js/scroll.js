@@ -18,4 +18,6 @@ $(window).scroll(function() {
   }
 });
 
-AOS.init();
+AOS.init({
+  disable: 'phone'
+});
