@@ -7,6 +7,8 @@ const exphbs = require('express-handlebars');
 
 // Own modules
 const {init: initNodeMailer, validateEmail} = require("./utils/mailer.js");
+const helpers = require("./handlebars/helpers.js");
+
 const sendMail = initNodeMailer({
   host: process.env.SMTP_HOST,
   user: process.env.EMAIL_ADDR,
@@ -27,16 +29,7 @@ httpServer.listen(PORT, () => {
 app.engine('hbs', exphbs({
   defaultLayout: 'main', 
   extname: 'hbs',
-  helpers: {
-      section: function(name, options){
-          if(!this._sections) this._sections = {};
-          this._sections[name] = options.fn(this);
-          return null;
-      },
-      json: function (content) {
-        return JSON.stringify(content);
-      }
-  }
+  helpers
 }));
 app.set('view engine', 'hbs');
 
@@ -49,15 +42,15 @@ app.use(express.urlencoded({ // to support URL-encoded bodies (from forms)
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Homepage route
-app.get('/', (req, res) => {
+app.get('/', (_, res) => {
   res.render('index', {title: 'Home'});
 });
 
-app.get('/about', (req, res) => {
+app.get('/about', (_, res) => {
   res.render('about', {title: 'About', noshrink: true});
 });
 
-app.get('*', (req, res) => {
+app.get('*', (_, res) => {
   res.status(404).send("Cannot find page!");
 });
 

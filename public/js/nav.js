@@ -1,8 +1,6 @@
 const SHRINK_POINT = 80;
 const shrinkSelectors = ["#logo", "#navbarSupportedContent", ".navbar"];
 
-let noshrink = document.currentScript.getAttribute('noshrink') === "true";
-
 $(function() {
   if(noshrink) { // if the nav should not shirnk on scroll
     changeClassState('add', 'shrink', 'no-transition'); // default the nav to shrunken nav on page load

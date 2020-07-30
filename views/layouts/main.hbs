@@ -20,15 +20,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js" integrity="sha512-M+hXwltZ3+0nFQJiVke7pqXY7VdtWW2jVG31zrml+eteTP7im25FdwtLhIBTWkaHRQyPrhO2uy8glLMHZzhFog==" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA==" crossorigin="anonymous" />
 
+  <!-- From associated file, import the head block for specific page scripts, styles etc.-->
+  {{{_sections.head}}}
+
   <!-- Site JS -->
-  <script src="js/nav.js" noshrink="{{noshrink}}"></script>
+  <script> // Handlebars vars to JS (ie: server to client)
+    const noshrink = {{or noshrink false}};
+  </script>
+
+  <script src="js/nav.js"></script>
   <script src="js/scroll.js"></script>
 
   <!-- Site CSS -->
   <link rel="stylesheet" href="css/main.css" />
   
-  <!-- From associated file, import the head block for specific page scripts, styles etc.-->
-  {{{_sections.head}}}
 </head>
 <body>
   <div class="scroll-top" id="scroll-top">

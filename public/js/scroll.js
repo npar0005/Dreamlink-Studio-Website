@@ -5,6 +5,10 @@ $(function() {
     offset = $(this).data("offset") || offset;
     $("html, body").animate({ scrollTop: $($(this).data("to")).offset().top - offset }, "slow");
   });
+
+  AOS.init({
+    disable: 'phone'
+  });
 });
 
 $(window).scroll(function() {
@@ -18,6 +22,3 @@ $(window).scroll(function() {
   }
 });
 
-AOS.init({
-  disable: 'phone'
-});
