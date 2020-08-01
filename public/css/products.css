@@ -1,0 +1,58 @@
+/*--- Product Category Buttons ---*/
+.category-buttons {
+  display: flex;
+  align-items: center;
+  padding: 2% 25%;
+  border-top: 0.2px solid rgb(203, 203, 203);
+}
+
+.cat-btn, .cat-btn:focus {
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.category-buttons .cat-btn-container .circle-icon {
+  background-color: #0a2146;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.category-buttons .cat-btn-container .circle-icon .icon {
+  color: white; 
+}
+
+.category-row .cat-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cat-btn:hover .circle-icon {
+  background-color: #1f58b3;
+}
+
+@media(max-width: 992px) { /* lg-breakpoint */
+  .category-buttons {
+    padding: 2% 10%;
+  }
+}
+
+@media(max-width: 768px) { /* md-breakpoint */
+  .category-buttons {
+    padding: 2% 0%;
+  }
+}
+
+/*--- Our Products ---*/
+.product-img {
+  transition: transform 0.3s;
+}
+
+.product-img-wrapper:hover .product-img {
+  transform: scale(1.05);
+} 
+
+.product-img-wrapper {
+  overflow: hidden;
+}

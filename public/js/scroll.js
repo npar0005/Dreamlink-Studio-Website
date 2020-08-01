@@ -6,9 +6,11 @@ $(function() {
     $("html, body").animate({ scrollTop: $($(this).data("to")).offset().top - offset }, "slow");
   });
 
-  AOS.init({
-    disable: 'phone'
-  });
+  if(AOS) {
+    AOS.init({
+      disable: 'phone'
+    });
+  }
 });
 
 $(window).scroll(function() {

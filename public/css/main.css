@@ -165,5 +165,11 @@ footer.footer .nav-links a {
   transition: all 0s !important;
 }
 
+.btn-hidden, .btn-hidden:focus {
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
 
 

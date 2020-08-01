@@ -25,7 +25,6 @@ httpServer.listen(PORT, () => {
 
 // Set the view template engine to use handlebars, and make it use a default layout of the file name 'main'
 // Main will be the layout which wraps everything for us. 
-
 app.engine('hbs', exphbs({
   defaultLayout: 'main', 
   extname: 'hbs',
@@ -49,6 +48,10 @@ app.get('/', (_, res) => {
 app.get('/about', (_, res) => {
   res.render('about', {title: 'About', noshrink: true});
 });
+
+app.get('/products', (_, res) => {
+  res.render('products', {title: 'Products', noshrink: true});
+})
 
 app.get('*', (_, res) => {
   res.status(404).send("Cannot find page!");
