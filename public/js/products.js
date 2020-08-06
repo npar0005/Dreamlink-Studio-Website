@@ -31,14 +31,20 @@ class Expandable {
   get selectorElem() {
     return $(this._selector);
   }
+
+  get exists() {
+    return this._selector !== undefined;
+  }
 }
 
 $(function() {
   $("[data-open='true']").css({display: 'block'}); // 
 
   const defExpandable = new Expandable($("[data-expand-default='true']")); // get default expandable to open on load
-  defExpandable.toggle(); // open the expandable
-  defExpandable.showItem(); // display contents of expandable (ie: display expandable's selector attr)
+  if(defExpandable.exists) { // this is false if no default-open expandable is set
+    defExpandable.toggle(); // open the expandable
+    defExpandable.showItem(); // display contents of expandable (ie: display expandable's selector attr)
+  }
 
   let prevSelector = defExpandable.selector;
   let expandable = defExpandable; // expandable references the currently in-use expandable
@@ -62,6 +68,8 @@ $(function() {
 
   $("[data-expand-close]").click(function() {
     // Close the current expandable
-    expandable.toggle();
+    if(expandable.isOpen) {
+      expandable.toggle();
+    }
   });
 });
