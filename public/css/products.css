@@ -56,3 +56,15 @@
 .product-img-wrapper {
   overflow: hidden;
 }
+
+.product-info-wrapper {
+  display: none;
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
+  background-color: #ececec;
+  padding: 1%;
+}
+
+.product-info {
+  display: none;
+}

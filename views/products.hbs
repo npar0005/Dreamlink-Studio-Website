@@ -1,5 +1,14 @@
 {{#section 'head'}}
   <link rel="stylesheet" href="css/products.css" />
+  <script>
+    $(function() {
+      $('[data-toggle="tooltip"]').tooltip({
+        trigger: 'hover'
+      });
+    });
+  </script>
+
+  <script src="js/products.js"></script>
 {{/section}}
 
 <!-- Heading and details -->
@@ -23,7 +32,7 @@
   <div class="container-fluid">
     <div class="category-row row justify-content-center">
       <div class="cat-btn-container col-md text-center">
-        <button class="cat-btn" data-toggle="tooltip" data-placement="top" title="Jump to Games">
+        <button class="cat-btn" data-toggle="tooltip" data-placement="top" title="See our games">
           <div class="circle-icon">
             <i class="icon fas fa-gamepad fa-fw"></i>
           </div>
@@ -32,7 +41,7 @@
       </div>
 
       <div class="cat-btn-container col-md text-center">
-        <button class="cat-btn">
+        <button class="cat-btn" data-toggle="tooltip" data-placement="top" title="See our applications">
           <div class="circle-icon">
             <i class="icon fas fa-file-code fa-fw"></i>
           </div>
@@ -40,7 +49,7 @@
         </button>
       </div>
 
-      <div class="cat-btn-container col-md text-center">
+      <div class="cat-btn-container col-md text-center" data-toggle="tooltip" data-placement="top" title="See our software">
         <button class="cat-btn">
           <div class="circle-icon">
             <i class="icon fas fa-laptop fa-fw"></i>
@@ -49,7 +58,7 @@
         </button>
       </div>
 
-      <div class="cat-btn-container col-md text-center">
+      <div class="cat-btn-container col-md text-center" data-toggle="tooltip" data-placement="top" title="See our extensions">
         <button class="cat-btn">
           <div class="circle-icon">
             <i class="icon fas fa-cog fa-fw"></i>
@@ -64,17 +73,47 @@
 <section class="our-products">
   <div class="games-cat">
     <h1 class="display-5 text-center font-weight-light text-capitalize">Games</h1>
-    <div class="container mt-4">
+    <div class="container my-4">
       <div class="row">
-        <div class="col-md-4"></div>
         <div class="col-md-4">
-          <button class="btn-hidden">
+          <button class="btn-hidden" data-expand="#game1">
+            <div class="product-img-wrapper shadow">
+              <img src="https://via.placeholder.com/350x200/248.png/fff" class="product-img img-fluid" alt="Game1"/>
+            </div>
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button class="btn-hidden" data-expand="#zombie-game-info">
             <div class="product-img-wrapper shadow">
               <img src="/images/products/zombie-runner.png" class="product-img img-fluid" alt="Zombie Runner cover image"/>
             </div>
           </button>
         </div>
-        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <button class="btn-hidden" data-expand="#game3">
+            <div class="product-img-wrapper shadow">
+              <img src="https://via.placeholder.com/350x200/248.png/fff" class="product-img img-fluid" alt="Game1"/>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-info-wrapper games-product-info mx-5" data-open="false">
+      <div class="panel-controls">
+        <span class="float-right">&times;</span>
+      </div>
+
+      <div id="game1" class="product-info">
+        <p>Game #1</p>
+      </div>
+
+      <div id="zombie-game-info" class="product-info">
+        <p>Zombie game info</p>
+      </div>
+
+      <div id="game3" class="product-info">
+        <p>Game 3</p>
       </div>
     </div>
   </div>

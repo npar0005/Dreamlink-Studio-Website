@@ -6,7 +6,7 @@ $(function() {
     $("html, body").animate({ scrollTop: $($(this).data("to")).offset().top - offset }, "slow");
   });
 
-  if(AOS) {
+  if(typeof AOS !== "undefined" && AOS) {
     AOS.init({
       disable: 'phone'
     });
