@@ -41,9 +41,10 @@ $(function() {
   defExpandable.showItem(); // display contents of expandable (ie: display expandable's selector attr)
 
   let prevSelector = defExpandable.selector;
+  let expandable = defExpandable; // expandable references the currently in-use expandable
   $("[data-expand]").click(function() {
-    const expandable = new Expandable(this);
-    
+    expandable = new Expandable(this);
+
     // Only toggle expandable when the wrapper is not open or if user clicks on the same expandable
     expandable.toggle(
       ({isOpen, selector}) => !isOpen || prevSelector === selector 
@@ -52,7 +53,15 @@ $(function() {
     // If user clicks on a different expandable than the one they're currently viewing, then switch
     if(prevSelector !== expandable.selector) { 
       prevSelector = expandable.selector;
+      // Here we just show the item, no need to toggle the expandable 
+      // as it will already be open (due to `.toggle()` above)
       expandable.showItem();
     }
+  });
+
+
+  $("[data-expand-close]").click(function() {
+    // Close the current expandable
+    expandable.toggle();
   });
 });
