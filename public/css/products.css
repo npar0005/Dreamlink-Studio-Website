@@ -68,3 +68,7 @@
 .product-info {
   display: none;
 }
+
+.panel-controls .close-btn {
+  font-size: 30px;
+}

@@ -76,21 +76,21 @@
     <div class="container my-4">
       <div class="row">
         <div class="col-md-4">
-          <button class="btn-hidden" data-expand="#game1">
+          <button class="d-none btn-hidden" data-expand="#game1">
             <div class="product-img-wrapper shadow">
               <img src="https://via.placeholder.com/350x200/248.png/fff" class="product-img img-fluid" alt="Game1"/>
             </div>
           </button>
         </div>
         <div class="col-md-4">
-          <button class="btn-hidden" data-expand="#zombie-game-info">
+          <button class="btn-hidden" data-expand="#zombie-game-info" data-expand-default="true">
             <div class="product-img-wrapper shadow">
               <img src="/images/products/zombie-runner.png" class="product-img img-fluid" alt="Zombie Runner cover image"/>
             </div>
           </button>
         </div>
         <div class="col-md-4">
-          <button class="btn-hidden" data-expand="#game3">
+          <button class="d-none btn-hidden" data-expand="#game3">
             <div class="product-img-wrapper shadow">
               <img src="https://via.placeholder.com/350x200/248.png/fff" class="product-img img-fluid" alt="Game1"/>
             </div>
@@ -101,7 +101,9 @@
 
     <div class="product-info-wrapper games-product-info mx-5" data-open="false">
       <div class="panel-controls">
-        <span class="float-right">&times;</span>
+        <button class="float-right close-btn btn-hidden" data-expand-close=".product-info-wrapper">
+          &times;
+        </button>
       </div>
 
       <div id="game1" class="product-info">
