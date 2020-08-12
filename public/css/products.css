@@ -72,3 +72,25 @@
 .panel-controls .close-btn {
   font-size: 30px;
 }
+
+.video-thumbnail img {
+  border-radius: 2%;
+  filter: brightness(75%) saturate(140%);
+}
+
+.video-thumbnail .video-popup-btn {
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  color: #d95039;
+  font-size: 12px;
+  border-radius: 50%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0;
+  outline: 0;
+  height: 50px;
+  width: 50px;
+}

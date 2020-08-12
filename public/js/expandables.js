@@ -13,14 +13,15 @@ class Expandable {
   }
 
   showContent(contentSelector) {
+    const speed = 400;
     // If the content which is currently shown is different to the content we want to show, then change it, else don't change it
     if(this._displayedContentSelector !== contentSelector) {
       const $toShowContent = $(contentSelector);
       $('.show', this._$expandableElem).hide().removeClass('show');
-      $toShowContent.stop().fadeIn();
+      $toShowContent.stop().fadeIn(this._isOpen ? speed : 0);
       $toShowContent.addClass('show'); // show class marks the expanded info
       this._displayedContentSelector = contentSelector;
-    }
+    } 
   }
 
   closeExpandable() {
@@ -47,8 +48,8 @@ class Expandables {
 
   openExpandable(contentSelector) {
     const expandable = this._getExpandable(contentSelector);
-    expandable.showExpandable();
     expandable.showContent(contentSelector);
+    expandable.showExpandable();
   }
 
   closeExpandable(closeBtnElem) {
