@@ -73,6 +73,12 @@
   font-size: 30px;
 }
 
+.panel-controls {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+}
+
 .video-thumbnail img {
   border-radius: 2%;
   filter: brightness(75%) saturate(140%);
