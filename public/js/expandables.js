@@ -58,6 +58,12 @@ class Expandables {
     const expandable = this._getExpandable(closeBtnElem);
     expandable.closeExpandable();
   }
+
+  closeAll() {
+    this._expandables.forEach(expandable => {
+      expandable.closeExpandable();
+    });
+  }
 }
 
 $(function() {
@@ -77,4 +83,43 @@ $(function() {
   $("[data-expand-close]").click(function() {
     expandables.closeExpandable(this);
   });
+
+
+  const mobileHandler = handleMobile.bind(window, expandables);
+  mobileHandler();
+  $(window).resize(mobileHandler);
 });
+
+// Handle Mobile Mode
+let smallMode = window.matchMedia("(min-width: 768px)").matches;
+
+function handleMobile(expandables) {
+  const {matches: small} = this.matchMedia("(max-width: 768px)");
+  const {matches: big} = this.matchMedia("(min-width: 768px)");
+  if(small && !smallMode) { // When window size <= 768, code here is executed (once)
+    // Show all expandables
+    $(".expandable").show();
+    $("[data-expand]").each(function() {
+      const toExpandSelctor = $(this).data('expand');
+      $(toExpandSelctor).show();
+    });
+    // Hide the close button as well as the expandable buttons.
+    $("[data-expand-close]").hide();
+    $("[data-expand]").hide();
+    smallMode = true;
+  } else if(big && smallMode) { // When window size > 768,code here is ran (once)
+    expandables.closeAll(); // Set all expandable states to closed
+    // Hide all expandables
+    $(".expandable").hide();
+    $("[data-expand]").each(function() {
+      const toExpandSelctor = $(this).data('expand');
+      $(toExpandSelctor).hide();
+    });
+    // Hide the close button as well as the expandable buttons.
+    $("[data-expand-close]").show();
+    $("[data-expand]").show();
+    
+    smallMode = false;
+  }
+}
+
