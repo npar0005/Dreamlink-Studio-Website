@@ -95,6 +95,12 @@ section {
   transition: transform 0.3s;
 }
 
+@media (max-width: 768px) {
+  .scroll-top {
+    bottom: 0;
+  }
+}
+
 /*--- Footer ---*/
 footer.footer {
   display: flex;
