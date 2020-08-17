@@ -130,3 +130,17 @@ Image gradient on hover
   height: 50px;
   width: 50px;
 }
+
+@media (max-width: 768px) {
+  .product-info-wrapper {
+    background-color: transparent;
+  }
+
+  .product-info:not(:first-child) {
+    margin-top: 7%;
+  }
+
+  .product-description {
+    padding: 0 2%;
+  }
+}
