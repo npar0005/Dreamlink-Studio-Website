@@ -275,14 +275,6 @@
   transform: scale(1.1);
 }
 
-.moon-btn:hover:not(:disabled) {
-  background-color: #0a2146;
-}
-
-.moon-btn:disabled {
-  cursor: not-allowed;
-}
-
 .store-buttons .store-icon {
   color: #5f5f60;
   transition: color 0.2s ease-in-out, transform 0.15s ease-in;

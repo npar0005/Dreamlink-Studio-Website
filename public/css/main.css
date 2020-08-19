@@ -64,7 +64,7 @@ section {
   color: rgb(205, 205, 235) !important;
 }
 
-/* Scroll Top Button */
+/*-- Scroll Top Button --*/
 .scroll-top {
   position: fixed;
   bottom: 5%;
@@ -175,6 +175,25 @@ footer.footer .nav-links a {
   border: 0;
   outline: 0;
   background: transparent;
+}
+
+.moon-btn-dark {
+  background-color: #0a2146;
+  color: white !important;
+}
+
+.moon-btn-dark:hover:not(:disabled) {
+  background-color: transparent;
+  color: #0a2146 !important;
+}
+
+.moon-btn:hover:not(:disabled) {
+  background-color: #0a2146;
+  color: white !important;
+}
+
+.moon-btn:disabled {
+  cursor: not-allowed;
 }
 
 @media(max-width:768px) {

@@ -45,7 +45,6 @@
 }
 
 /*--- Our Products ---*/
-
 .our-products .icon-sep {
   display: table;
   margin: 0 auto;
@@ -102,6 +101,29 @@ Image gradient on hover
   border-radius: 5px;
 }
 
+/*.store-buttons {
+  position: absolute;
+}*/ 
+
+.store-buttons .store-icon {
+  color: #5f5f60;
+  transition: color 0.2s ease-in-out, transform 0.15s ease-in;
+}
+
+.store-buttons .store-icon.apple-store {
+  font-size: 30px;
+}
+
+.store-buttons .store-icon.android-store {
+  font-size: 24px;
+}
+
+.store-buttons .store-icon:hover {
+  color: #0a2146;
+  transform: scale(1.1);
+}
+
+
 .product-info-wrapper {
   display: none;
   overflow: hidden;
@@ -144,6 +166,25 @@ Image gradient on hover
   width: 50px;
 }
 
+/* Store button container buttons (@media) */
+.store-buttons-container .btn {
+  font-size: 18px;
+}
+
+.store-buttons-container .store-icon {
+  margin-right: 5px;
+}
+
+.store-buttons-container .apple-store {
+  font-size: 21px;
+}
+
+
+/* Store buttons container Images (@media) */
+.store-buttons-container .store-img {
+  width: 185px;
+}
+
 @media (max-width: 768px) {
   .product-info-wrapper {
     background-color: transparent;
@@ -155,5 +196,14 @@ Image gradient on hover
 
   .product-description {
     padding: 0 2%;
+  }
+
+  .store-buttons-container .btn {
+    width: 100%;
+  }
+
+  .store-buttons-container .store-img {
+    width: 60%;
+    margin-top: 5px;
   }
 }
