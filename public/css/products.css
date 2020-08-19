@@ -45,6 +45,19 @@
 }
 
 /*--- Our Products ---*/
+
+.our-products .icon-sep {
+  display: table;
+  margin: 0 auto;
+  padding: 3%;
+}
+
+.our-products .icon-sep .icon {
+  font-size: 40px;
+  color: #39209c;
+  text-align: center; 
+}
+
 .product-img {
   display: block;
   transition: transform 0.3s;
