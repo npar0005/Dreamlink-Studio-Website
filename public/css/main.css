@@ -155,7 +155,7 @@ footer.footer .nav-links a {
 
 .sep {
   margin: 60px auto;
-  width: 600px;
+  width: 40%;
   background: #b1b1b1;
 }
 
@@ -177,5 +177,8 @@ footer.footer .nav-links a {
   background: transparent;
 }
 
-
-
+@media(max-width:768px) {
+  .sep {
+    width: 100%;
+  }
+}
