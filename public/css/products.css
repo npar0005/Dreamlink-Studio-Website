@@ -101,13 +101,15 @@ Image gradient on hover
   border-radius: 5px;
 }
 
-/*.store-buttons {
-  position: absolute;
-}*/ 
+.store-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .store-buttons .store-icon {
   color: #5f5f60;
-  transition: color 0.2s ease-in-out, transform 0.15s ease-in;
+  transition: color 0.2s ease-in-out, transform 0.15s ease-in, filter 0.15s ease-in;
 }
 
 .store-buttons .store-icon.apple-store {
@@ -115,12 +117,13 @@ Image gradient on hover
 }
 
 .store-buttons .store-icon.android-store {
-  font-size: 24px;
+  font-size: 17px;
 }
 
 .store-buttons .store-icon:hover {
   color: #0a2146;
   transform: scale(1.1);
+  filter: brightness(50%);
 }
 
 
@@ -177,6 +180,12 @@ Image gradient on hover
 
 .store-buttons-container .apple-store {
   font-size: 21px;
+}
+
+.store-buttons-container .android-store {
+  font-size: 15px;
+  vertical-align: sub;
+  transition: filter 0.3s;
 }
 
 
