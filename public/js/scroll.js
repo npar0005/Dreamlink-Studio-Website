@@ -11,6 +11,11 @@ $(function() {
       disable: 'phone'
     });
   }
+
+  // Set up popovers for scroll top navigation
+  $('[data-toggle="tooltip"]').tooltip({
+    trigger: 'hover'
+  });
 });
 
 $(window).scroll(function() {
