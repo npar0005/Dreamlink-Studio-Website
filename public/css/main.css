@@ -97,7 +97,7 @@ section {
 
 @media (max-width: 768px) {
   .scroll-top {
-    bottom: 0;
+    bottom: 1%;
   }
 }
 
