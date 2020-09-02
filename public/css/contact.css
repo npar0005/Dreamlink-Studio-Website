@@ -21,6 +21,81 @@ textarea.contact-message {
 
 /* -- Social Media -- */
 .socials-container {
+  display: flex;
   background: rgb(35, 8, 40);
   height: 100%;
+  width: 100%;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.contact-info .contact-icon {
+  margin-right: 5px;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+}
+
+.info-container p {
+  margin: 0;
+}
+
+
+.socials {
+  width: 80%;
+}
+
+.social-links {
+  font-size: 22px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-links .social-bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  transition: background-color 0.4s;
+}
+
+.social-links .social-icon {
+  transition: color 0.4s;
+}
+
+
+.social-links #facebook .social-icon {
+  color: #4967aa;
+}
+
+.social-links #youtube .social-icon {
+  color: #fe0100;
+}
+
+.social-links #linkedin .social-icon {
+  color: #0277b5;
+}
+
+.social-links .social-bubble:hover > .social-icon {
+  color: white !important;
+}
+
+.social-links .social-bubble#facebook:hover { 
+  background-color: #4967aa;
+}
+
+.social-links .social-bubble#youtube:hover {
+  background-color: #fe0100;
+}
+
+.social-links .social-bubble#linkedin:hover {
+  background-color: #0277b5;
 }
