@@ -51,7 +51,11 @@ app.get('/about', (_, res) => {
 
 app.get('/products', (_, res) => {
   res.render('products', {title: 'Products', noshrink: true});
-})
+});
+
+app.get('/contact', (_, res) => {
+  res.render('contact', {title: 'Conact', noshrink: true});
+});
 
 app.get('*', (_, res) => {
   res.status(404).send("Cannot find page!");
