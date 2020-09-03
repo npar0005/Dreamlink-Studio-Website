@@ -1,6 +1,6 @@
 /* -- Get in touch form -- */
 .get-in-touch-form-container {
-  padding:50px;
+  padding: 50px;
 }
 
 .form-control {
@@ -102,4 +102,19 @@ textarea.contact-message {
 
 .social-links .social-bubble#linkedin:hover {
   background-color: #0277b5;
+}
+
+@media (max-width: 768px) {
+  .get-in-touch-form-container {
+    padding: 3%;
+  }
+
+  .socials-container {
+    padding: 20% 0;
+    text-align: center;
+  }
+
+  .socials-container .info-container {
+    margin: 0 auto;
+  }
 }
