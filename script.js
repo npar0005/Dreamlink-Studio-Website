@@ -97,7 +97,15 @@ app.post('/contact-form', validateContactPage, async (req, res) => {
       to: email || process.env.EMAIL_ADDR, // TODO: Change this
       bcc: email,
       subject: `${category} - Website Query`,
-      text: `${firstname} ${surname} has sent the following from the dreamlinkstudio.com contact page:\nCategory: ${category}\n${message}`
+      html: `
+        <h3>${firstname} ${surname} has sent the following from the dreamlinkstudio.com contact page:</h3>
+        <p><b>First name:</b> ${firstname}<p>
+        <p><b>Surname:</b> ${surname}<p>
+        <p><b>Category:</b> ${category}<p>
+        <p><b>Email:</b> ${email}<p>
+        <p><b>Message:</b></p>
+        <p>${message}</p>
+      `
     });
     res.json({error: false, id: info.messageId});
   } catch(err) {
