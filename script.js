@@ -61,18 +61,19 @@ app.get('*', (_, res) => {
   res.status(404).send("Cannot find page!");
 });
 
+const validateContactPage = (req, res, next) => {
+  const values = Object.values(req.body);
+  if(!values.every(s => s.trim())) { // check all entries have a value
+    return res.json({error: true, msg: 'Invalid form inputs!'})
+  } 
 
-app.post('/sendmail', (req, res, next) => {
-  let error = Object.values(req.body).some(val => !val.trim());
-  if(error) {
-    return res.json({error, msg: 'Invalid form inputs!'});
-  }
-
-  if(!validateEmail(req.body.email)) {
+  if(!validateEmail(req.body.email)) { // ensure email is of the correct format
     return res.json({error: true, msg: 'Invalid email address!'});
   }
   next();
-}, async (req, res) => {
+}
+
+app.post('/sendmail', validateContactPage, async (req, res) => {
   try {
     const {firstName, lastName, email, emailBody} = req.body;
     const info = await sendMail({
@@ -84,6 +85,22 @@ app.post('/sendmail', (req, res, next) => {
     });
     res.json({error: false, id: info.messageId});
   } catch(err) {
-    res.json({error: true, msg: "Error with sending email"})
+    res.json({error: true, msg: "Internal error with sending email"});
+  }
+});
+
+app.post('/contact-form', validateContactPage, async (req, res) => {
+  const {category, firstname, surname, email, message} = req.body;
+  try {
+    const info = await sendMail({
+      from: `Website Contact Page 🌙<${process.env.EMAIL_ADDR}>`,
+      to: email || process.env.EMAIL_ADDR, // TODO: Change this
+      bcc: email,
+      subject: `${category} - Website Query`,
+      text: `${firstname} ${surname} has sent the following from the dreamlinkstudio.com contact page:\nCategory: ${category}\n${message}`
+    });
+    res.json({error: false, id: info.messageId});
+  } catch(err) {
+    res.json({error: true, msg: "Internal error with sending email"});
   }
 });

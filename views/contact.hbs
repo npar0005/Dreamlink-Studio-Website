@@ -2,6 +2,13 @@
 
 <!-- Page CSS -->
 <link rel="stylesheet" href="css/contact.css" />
+
+<!-- SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+<!-- Page JS -->
+<script src="js/email.js"></script>
+
 {{/section}}
 
 <section class="contact-us">
@@ -25,16 +32,16 @@
       <div class="col-md-8">
         <div class="get-in-touch-form-container">
           <h3 class="font-weight-light">Get in Touch</h3>
-          <form class="contact-form">
+          <form action="/contact-form" id="contact-form" class="form needs-validation contact-form" novalidate>
             <div class="form-group">
               <!--label for="exampleInputEmail1">Category</label-->
-              <select class="form-control category-dd">
+              <select class="form-control category-dd" name="category" required>
                 <option disabled selected>Category</option>
-                <option value="support">Support</option>
-                <option value="bug">Bug Report</option>
-                <option value="sales">Sales and Payment</option>
-                <option value="feature-request">Feature Request</option>
-                <option value="other">Other</option>
+                <option value="Support">Support</option>
+                <option value="Bug">Bug Report</option>
+                <option value="Sales">Sales and Payment</option>
+                <option value="Feature request">Feature Request</option>
+                <option value="Other">Other</option>
               </select>
             </div>
 
@@ -55,7 +62,7 @@
                 </div>
                 <div class="form-group mb-0">
                   <!--label for="email">Email</label-->
-                  <input type="email" id="email" class="form-control" placeholder="email@example.com" required/>
+                  <input type="email" name="email" id="email" class="form-control" placeholder="email@example.com" required/>
                 </div>
               </div>
             </div>
@@ -67,7 +74,7 @@
               <div class="card-body">
                 <div class="form-group mb-0">
                   <!--label for="email">Email</label-->
-                  <textarea id="message" class="contact-message form-control" placeholder="Your message..." data-gramm_editor="false" rows="4" required></textarea>
+                  <textarea id="message" name="message" class="contact-message form-control" placeholder="Your message..." data-gramm_editor="false" rows="4" required></textarea>
                 </div>
               </div>
             </div>
