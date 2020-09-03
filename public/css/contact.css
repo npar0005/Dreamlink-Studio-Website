@@ -22,7 +22,11 @@ textarea.contact-message {
 /* -- Social Media -- */
 .socials-container {
   display: flex;
-  background: rgb(35, 8, 40);
+  /*background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/contact-social-bg-2.jpg');*/
+  background-image: url('../images/contact-social-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*background-attachment: fixed;*/
   height: 100%;
   width: 100%;
   color: white;
