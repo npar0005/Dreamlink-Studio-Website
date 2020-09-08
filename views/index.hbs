@@ -300,22 +300,42 @@
       <div class="form-row">
         <div class="form-group col-sm-6 py-0">
           <label class="sr-only" for="input-first-name">First name</label>
-          <input class="form-control" name="firstName" id="input-first-name" type="text" placeholder="First Name" required />
+          <div class="input-group">
+            <input class="form-control" name="firstName" id="input-first-name" type="text" placeholder="First Name" required />
+            <div class="invalid-feedback">
+              Please enter your first name.
+            </div>
+          </div>
         </div>
         <div class="form-group col-sm-6 py-0">
           <label class="sr-only" for="input-last-name">Last name</label>
-          <input class="form-control" name="lastName" id="input-last-name" type="text" placeholder="Last Name" required />
+          <div class="input-group">
+            <input class="form-control" name="lastName" id="input-last-name" type="text" placeholder="Last Name" required />
+            <div class="invalid-feedback">
+              Please enter your last name.
+            </div>
+          </div>
         </div>
       </div>
       
       <div class="form-group">
         <label class="sr-only" for="input-email">Email address</label>
-        <input type="email" name="email" class="form-control" id="input-email" placeholder="Enter email" required />
+        <div class="input-group">
+          <input type="email" name="email" class="form-control" id="input-email" placeholder="Enter email" required />
+          <div class="invalid-feedback">
+            Please enter a valid email address.
+          </div>
+        </div>
       </div>
 
       <div class="form-group">
         <label class="sr-only" for="email-body">Email body message</label>
-        <textarea class="form-control no-resize" name="emailBody" data-gramm_editor="false" id="email-body" placeholder="Message" rows="4" required></textarea>
+        <div class="input-group">
+          <textarea class="form-control no-resize" name="emailBody" data-gramm_editor="false" id="email-body" placeholder="Message" rows="4" required></textarea>
+          <div class="invalid-feedback">
+            Please enter a message to send.
+          </div>
+        </div>
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-outline-dark submit-btn moon-btn btn-block">Send</button>

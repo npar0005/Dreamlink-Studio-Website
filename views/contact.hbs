@@ -34,15 +34,19 @@
           <h3 class="font-weight-light">Get in Touch</h3>
           <form action="/contact-form" id="contact-form" class="form needs-validation contact-form" novalidate>
             <div class="form-group">
-              <!--label for="exampleInputEmail1">Category</label-->
-              <select class="form-control category-dd" name="category" required>
-                <option value="" disabled selected>Category</option>
-                <option value="Support">Support</option>
-                <option value="Bug">Bug Report</option>
-                <option value="Sales">Sales and Payment</option>
-                <option value="Feature request">Feature Request</option>
-                <option value="Other">Other</option>
-              </select>
+              <div class="input-group">
+                <select class="form-control category-dd" name="category" required>
+                  <option value="" disabled selected>Category</option>
+                  <option value="Support">Support</option>
+                  <option value="Bug">Bug Report</option>
+                  <option value="Sales">Sales and Payment</option>
+                  <option value="Feature request">Feature Request</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please choose a category.
+                </div>
+              </div>
             </div>
 
             <div class="tell-us-more-container card">
@@ -52,17 +56,31 @@
               <div class="card-body">
                 <div class="form-row">
                   <div class="form-group col">
-                    <!--label for="firstname">Firstname</label-->
-                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First name" required />
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First name" required />
+                      <div class="invalid-feedback">
+                        Please enter your first name.
+                      </div>
+                    </div>
                   </div>
                   <div class="form-group col">
                     <!--label for="surname">Surname</label-->
-                    <input type="text" class="form-control" id="surname" name="surname" placeholder="Surname" required />
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="surname" name="surname" placeholder="Surname" required />
+                      <div class="invalid-feedback">
+                        Please enter your last name.
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="form-group mb-0">
                   <!--label for="email">Email</label-->
-                  <input type="email" name="email" id="email" class="form-control" placeholder="email@example.com" required/>
+                  <div class="input-group">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="email@example.com" required/>
+                    <div class="invalid-feedback">
+                      Please enter a valid email address.
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -73,8 +91,12 @@
               </h5>
               <div class="card-body">
                 <div class="form-group mb-0">
-                  <!--label for="email">Email</label-->
-                  <textarea id="message" name="message" class="contact-message form-control" placeholder="Your message..." data-gramm_editor="false" rows="4" required></textarea>
+                  <div class="input-group">
+                    <textarea id="message" name="message" class="contact-message form-control" placeholder="Your message..." data-gramm_editor="false" rows="4" required></textarea>
+                    <div class="invalid-feedback">
+                      Please enter a message.
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
