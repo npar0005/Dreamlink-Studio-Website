@@ -22,11 +22,11 @@ textarea.contact-message {
 /* -- Social Media -- */
 .socials-container {
   display: flex;
-  /*background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/contact-social-bg-2.jpg');*/
-  background-image: url('../images/contact-social-bg.jpg');
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/contact-social-bg-2.jpg');
+  /* background-image: url('../images/contact-social-bg.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
-  /*background-attachment: fixed;*/
+  /* background-attachment: fixed; */
   height: 100%;
   width: 100%;
   color: white;
@@ -38,6 +38,12 @@ textarea.contact-message {
 
 .contact-info .contact-icon {
   margin-right: 5px;
+  font-size: 30px; 
+  color: #d94f39;
+}
+
+.contact-info .email-link {
+  color: #ffab41;
 }
 
 .info-container {
@@ -47,11 +53,16 @@ textarea.contact-message {
 
 .info-container p {
   margin: 0;
+  font-size: 25px;
 }
 
 
 .socials {
   width: 80%;
+}
+
+.socials .connect-heading {
+  font-size: 25px;
 }
 
 .social-links {
