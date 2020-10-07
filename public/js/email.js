@@ -13,6 +13,7 @@ $(function() {
       $.post(action, data, ({error, msg}) => {
         $submitBtn.attr('disabled', false);
         $submitBtn.text(oldBtnText);
+        console.log("Error", error);
         if(error) {
           Swal.fire({
             icon: 'error',

@@ -7,6 +7,7 @@ const {init: initNodeMailer, validateEmail} = require("./utils/mailer.js");
 
 const sendMail = initNodeMailer({
   host: process.env.SMTP_HOST,
+  port: +process.env.EMAIL_PORT,
   user: process.env.EMAIL_ADDR,
   pass: process.env.EMAIL_PASS
 });
@@ -51,13 +52,15 @@ router.post('/sendmail', validateContactPage, async (req, res) => {
     const {firstName, lastName, email, emailBody} = req.body;
     const info = await sendMail({
       from: `Website Contact Form 🌙 <${process.env.EMAIL_ADDR}>`,
-      to: email || process.env.EMAIL_ADDR, // TODO: Change this
+      to: process.env.EMAIL_ADDR, // TODO: Change this
       bcc: email,
       subject: `Website query from ${firstName} ${lastName}`,
       text: `${firstName} ${lastName} has sent the following from the dreamlinkstudio.com website:\n${emailBody}`
     });
+    console.log("INFO: ", info);
     res.json({error: false, id: info.messageId});
   } catch(err) {
+    console.log(err);
     res.json({error: true, msg: "Internal error with sending email"});
   }
 });
@@ -67,7 +70,7 @@ router.post('/contact-form', validateContactPage, async (req, res) => {
   try {
     const info = await sendMail({
       from: `Website Contact Page 🌙<${process.env.EMAIL_ADDR}>`,
-      to: email || process.env.EMAIL_ADDR, // TODO: Change this
+      to: process.env.EMAIL_ADDR, // TODO: Change this
       bcc: email,
       subject: `${category} - Website Query`,
       html: `
@@ -82,6 +85,7 @@ router.post('/contact-form', validateContactPage, async (req, res) => {
     });
     res.json({error: false, id: info.messageId});
   } catch(err) {
+    console.log(err);
     res.json({error: true, msg: "Internal error with sending email"});
   }
 });

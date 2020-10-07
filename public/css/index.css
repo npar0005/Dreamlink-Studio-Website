@@ -68,18 +68,40 @@
   }
 }
 
-@media(max-height: 600px) {
+@media(max-width: 768px) {
   .scroll-down-container {
     bottom: 10%;
   }
 }
 
-@media(max-height: 450px) {
+@media(max-width: 600px) {
   .scroll-down-container {
     display: none;
   }
+
+  .caption {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .caption h1 {
+    font-size: 40px;
+  }
+
+  .caption h3 {
+    font-size: 25px;
+  }
 }
 
+@media(max-width: 400px) {
+  .caption h1 {
+    font-size: 35px;
+  }
+
+  .caption h3 {
+    font-size: 22px;
+  }
+}
 /*--- What we do ---*/
 
 #quality-box {
@@ -118,6 +140,23 @@
   display: none;
 }
 
+@media(max-width: 450px) {
+  .what-we-do > h1 {
+    margin-top: 25px;
+  }
+
+  .value-box-container{
+    padding: 0 !important;
+  }
+
+  .value-box {
+    width: 80%;
+  }
+  .value-box h3 {
+    padding-top: 0 !important;
+  }
+}
+
 
 /*--- Owl carousel cards ---*/
 .member-info .circle-img {
@@ -141,12 +180,21 @@
   height: 300px;
 }
 
-
 .member-info {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+@media(max-width: 450px) {
+  .owl-prev {
+    display: none;
+  }
+
+  .own-next {
+    display: none;
+  }
 }
 
 /*--- Owl carousel flip cards ---*/
