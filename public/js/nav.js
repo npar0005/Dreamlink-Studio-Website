@@ -10,6 +10,10 @@ $(function() {
     header.classList.add('sticky-top');
     navbar.classList.remove('fixed-top');
   }
+
+  setTimeout(() => {
+    changeClassState('remove', 'no-transition');
+  }, 900);
   handleResize(); // update nav shrink upon page load.
 })
 
