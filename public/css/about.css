@@ -25,3 +25,8 @@
   }
 }
 
+@media (max-width: 768px) {
+  body { /* animate  on scroll mobile overflow fix */
+    overflow-x: hidden;
+  }
+}
