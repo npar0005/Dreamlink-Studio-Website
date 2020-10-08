@@ -9,5 +9,8 @@ module.exports = {
   },
   or(...args) {
     return args.slice(0, -1).some(Boolean);
+  },
+  ifEquals(arg1, arg2, options) {
+    return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
   }
 }

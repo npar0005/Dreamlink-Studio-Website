@@ -26,7 +26,7 @@ router.get('/products', (_, res) => {
 });
 
 router.get('/contact', (_, res) => {
-  res.render('contact', {title: 'Conact', noshrink: true});
+  res.render('contact', {title: 'Contact', noshrink: true});
 });
 
 router.get('*', (_, res) => {
