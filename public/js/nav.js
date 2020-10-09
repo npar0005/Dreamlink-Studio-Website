@@ -38,7 +38,7 @@ function handleResize() {
   } else {
     if(!noshrink) {
       handleScroll(); // keeps or removes the shrink from nav (only if  shrink is allowed)
-      window.addEventListener(handleScroll);
+      window.addEventListener('scroll', handleScroll);
     }
   }
 }
