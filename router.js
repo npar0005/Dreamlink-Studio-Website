@@ -30,7 +30,7 @@ router.get('/contact', (_, res) => {
 });
 
 router.get('*', (_, res) => {
-  res.status(404).send("Cannot find page!");
+  res.redirect("/");
 });
 
 
