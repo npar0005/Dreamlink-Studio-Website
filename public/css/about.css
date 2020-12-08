@@ -29,4 +29,9 @@
   body { /* animate  on scroll mobile overflow fix */
     overflow-x: hidden;
   }
+
+  .our-people .profile-image{
+    width: 180px;
+    height: 100%;
+  }
 }
