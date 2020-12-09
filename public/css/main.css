@@ -23,7 +23,7 @@ section {
 
 .navbar.shrink {
   background-color: #f7f7f7;/*rgba(255, 255, 255, 1);*/
-  border-bottom: 1px solid rgb(212,53,28);
+  border-bottom: 1px solid #d4351c;
 }
 
 #navbarSupportedContent {
