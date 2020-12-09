@@ -15,7 +15,14 @@ $(function() {
     changeClassState('remove', 'no-transition');
   }, 900);
   handleResize(); // update nav shrink upon page load.
-})
+
+  if($(":target").length) {
+    const headerSize = 150;
+    $("html, body").animate({scrollTop: $(window.location.hash).offset().top - headerSize}, 0);
+  }
+});
+
+
 
 function changeClassState(action, ...classes) {
   shrinkSelectors.forEach(selector => {
