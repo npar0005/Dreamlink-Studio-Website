@@ -153,7 +153,7 @@ footer.footer .nav-links a {
 }
 
 .circle-icon {
-  color: #D4351C !important;
+  color: white;/* #D4351C !important;*/
   font-size: 25px;
 }
 
