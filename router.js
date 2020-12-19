@@ -52,7 +52,7 @@ router.post('/sendmail', validateContactPage, async (req, res) => {
     const {firstName, lastName, email, emailBody} = req.body;
     const info = await sendMail({
       from: `Website Contact Form 🌙 <${process.env.EMAIL_ADDR}>`,
-      to: process.env.EMAIL_ADDR, // TODO: Change this
+      to: process.env.EMAIL_ADDR,
       bcc: email,
       subject: `Website query from ${firstName} ${lastName}`,
       text: `${firstName} ${lastName} has sent the following from the dreamlinkstudio.com website:\n${emailBody}`
@@ -70,7 +70,7 @@ router.post('/contact-form', validateContactPage, async (req, res) => {
   try {
     const info = await sendMail({
       from: `Website Contact Page 🌙<${process.env.EMAIL_ADDR}>`,
-      to: process.env.EMAIL_ADDR, // TODO: Change this
+      to: process.env.EMAIL_ADDR,
       bcc: email,
       subject: `${category} - Website Query`,
       html: `

@@ -6,6 +6,13 @@
 
 /*--- Our People ---*/
 
+.profile-row:nth-child(odd) {
+  background-color: #da523d;
+  padding: 1.5%;
+  color: white;
+  border-radius: 15px;
+}
+
 .our-people .socials {
   margin-top: 10px;
 }
@@ -13,6 +20,10 @@
 .our-people .socials .icon {
   font-size: 20px;
   color: #0276b6; /* linked in offcial brand logo colour */
+}
+
+.profile-row:nth-child(odd) .socials .icon {
+  color: white; /* white on orange bg */
 }
 
 .our-people .profile-row {
