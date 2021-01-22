@@ -1,19 +1,20 @@
 const nodemailer = require("nodemailer");
+require("dotenv").config();
 
 function init({host, port, user, pass}) {
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
-    host: host, // TODO: (production - remove mail)
-    port: 26, // TODO: 465 in production
-    secure: port === 465, // true for 465, false for other ports // TODO true in production
+    host: host, // TODO: (production - remove `.mail` from email in .env)
+    port: process.env.NODE_ENV === "prod" ? 465 : 26, // 465 in production
+    secure: process.env.NODE_ENV === "prod" || port === 465, // true for 465, false for other ports (true in production)
     auth: {
       user,
       pass 
     },
-    // TODO: Remove in production
-    tls: {
+    // TSL Remove in production
+    ...(process.env.NODE_ENV === "prod" || {tls: {
       rejectUnauthorized: false
-    }
+    }})
   });
 
   // Closure to close over the transporter we made into an asyn utility function, can be called in main
