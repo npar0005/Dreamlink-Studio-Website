@@ -92,8 +92,25 @@
 
     <!-- Our team carousel -->
     <div class="owl-profile-carousel owl-carousel owl-theme">
+      {{#each teamData}}
+        <div class="item flip-card" data-aos="zoom-in-up" data-aos-delay="{{calcAOSDelay @index}}" data-aos-easing="ease-out-back">
+          <div class="member-info flip-card-inner">
+            <div class="flip-card-front">
+              <img src="{{this.circleProfile}}" class="circle-img" alt="{{this.fullName}}" loading="lazy" />
+              <h4>{{this.fullName}}</h4>
+              <p>{{this.role}}</p>
+            </div>
+            <div class="flip-card-back">
+              <h1>{{this.firstName}}</h1>
+              <p>{{this.roleDetail}}</p>
+              <a href="/about#{{this.id}}" class="btn btn-md btn-outline-light">Learn More</a>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+
       <!-- Slide one (4 cards)  -->
-      <div class="item flip-card" data-aos="zoom-in-up" data-aos-delay="100" data-aos-easing="ease-out-back">
+      <!--div class="item flip-card" data-aos="zoom-in-up" data-aos-delay="100" data-aos-easing="ease-out-back">
         <div class="member-info flip-card-inner">
           <div class="flip-card-front">
             <img src="images/team/index-profiles/harrison_verrios.jpg" class="circle-img" alt="Harrison Verrios" loading="lazy" />
@@ -148,10 +165,10 @@
             <a href="/about#wilbert-soetanto" class="btn btn-md btn-outline-light">Learn More</a>
           </div>
         </div>
-      </div>
+      </div-->
 
       <!-- Slide two (4 cards)  -->
-      <div class="item flip-card" data-aos="zoom-in-up" data-aos-delay="900" data-aos-easing="ease-out-back">
+      <!--div class="item flip-card" data-aos="zoom-in-up" data-aos-delay="900" data-aos-easing="ease-out-back">
         <div class="member-info flip-card-inner">
           <div class="flip-card-front">
             <img src="images/team/index-profiles/matthew-szehao-ong.jpg" class="circle-img" alt="Matthew Ong" loading="lazy" />
@@ -206,9 +223,9 @@
             <a href="/about#hui_wen_poh" class="btn btn-md btn-outline-light">Learn More</a>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </div-->
+    </div> <!-- Close owl carousel container -->
+  </div> <!-- Close container -->
   <hr class="sep"/>
 </section>
 

@@ -1,49 +1,5 @@
 [
   {
-    "id": "harrison-verrios", 
-    "fullName": "Harrison Verrios",
-    "firstName": "Harrison",
-    "linkedin": "https://www.linkedin.com/in/harrison-verrios/",
-    "aboutProfile": "images/team/about-profiles/harrison_verrios.jpg",
-    "circleProfile": "images/team/index-profiles/harrison_verrios.jpg",
-    "description": "<p>Harrison has been developing games for over eight years and has been involved in the publication of seven iOS and Android applications. He is now finishing off his bachelor's degree, majoring in astrophysics, mathematics and game development. His passion for game programming has led him to develop projects with multiple teams, with the current focus on coding Dreamlink Studio's new app, Dead Instinct, using the Unity game engine. Additionally, he is currently involved in a robotics student team at Monash University; the Monash Nova Rover team, building Mars rover analogues for an international competition run by NASA.</p>",
-    "role": "Developer",
-    "roleDetail": "App Developer"
-  },
-  {
-    "id": "jeffrey-goh", 
-    "fullName": "Jeffrey Goh",
-    "firstName": "Jeffrey",
-    "linkedin": "https://www.linkedin.com/in/jeffrey-goh-20479770/",
-    "aboutProfile": "images/team/about-profiles/jeffrey_goh.jpg",
-    "circleProfile": "images/team/index-profiles/jeffrey_goh.jpg",
-    "description": "<p class='mb-0 d-md-block d-inline'>When he's not building or testing out rhythm game controller pads, Jeffrey loves to find the humor in this weird world that we live in. He strives to provide a different point of view to make others think about how things could be done better and more efficient. Watch out though, he's always armed with a wild set of ideas to load a cannon with, mostly to try and hit the broad side of a barn. Other than indulging reality, Jeffrey specializes in design work, UI and UX implementation, coding, and moderation.</p><p class='mt-0 d-md-block d-inline'>He is the one you can trust if you need something done off the cuff.</p>",
-    "role": "Developer",
-    "roleDetail": "App Developer & UI/UX"
-  },
-  {
-    "id": "nicholas-parsons", 
-    "fullName": "Nicholas Parsons",
-    "firstName": "Nicholas",
-    "linkedin": "https://www.linkedin.com/in/nick-parsons-ba006516b/",
-    "aboutProfile": "images/team/about-profiles/nicholas_parsons.jpg",
-    "circleProfile": "images/team/index-profiles/nicholas_parsons.jpg",
-    "description": "<p>Nick has recently just finished his Bachelor of Computer Science where he specialised in Advanced Computer Science. During his time at University, Nick developed a strong passion for web-based technologies. Nick has put his passion and skills to use by taking on the role of lead web-developer, where he built and helped design Dreamlink Studio’s website. While at Dreamlink Studio, Nick has also worked with the UI/UX team to help create user-interfaces for our applications. When he is not coding, Nick enjoys to watch Netflix, or, if it’s winter, he enjoys to head up to the snow for a ski.</p>",
-    "role": "Developer",
-    "roleDetail": "Web Developer & UI/UX"
-  },
-  {
-    "id": "wilbert-soetanto", 
-    "fullName": "Wilbert Soetanto",
-    "firstName": "Wilbert",
-    "linkedin": "https://www.linkedin.com/in/wilbert-soetanto/",
-    "aboutProfile": "images/team/about-profiles/wilbert_soetanto.jpg",
-    "circleProfile": "images/team/index-profiles/wilbert_soetanto.jpg",
-    "description": "<p>A passionate and resourceful individual, and Dreamlink Studio's Development Team Lead, taking charge over a team of highly skilled developers, ensuring timely and quality deliverables. Wilbert finished his high school in Indonesia, earned his Diploma in Mechatronics Engineering in Singapore, and completed his Bachelor of Business Information Systems with Games Development Minor in Australia. He experienced working with people from a plethora of cultural backgrounds, and is huge enthusiast of consumer electronics, and Japanese music and anime. He spends his free time doing research of any random topics on the internet.</p>",
-    "role": "Lead Developer",
-    "roleDetail": "App Developer"
-  },
-  {
     "id": "matthew-szehao-ong", 
     "fullName": "Matthew Ong",
     "firstName": "Matthew",
@@ -86,5 +42,49 @@
     "description": "<p>Hui Wen Poh (HW) is a mathematical person and enjoys being in the pool. She's also a chatter box and loves to immerse herself within the Chinese culture. She's not into aesthetics but she ended up in graphics. Don’t ask her how because even she doesn't know. HW is a very fresh graduate with an innocent mind and no impurities. She really likes working within a team as well as on her own.</p>",
     "role": "Graphics Designer",
     "roleDetail": "Graphics Designer and Finance"
+  },
+  {
+    "id": "wilbert-soetanto", 
+    "fullName": "Wilbert Soetanto",
+    "firstName": "Wilbert",
+    "linkedin": "https://www.linkedin.com/in/wilbert-soetanto/",
+    "aboutProfile": "images/team/about-profiles/wilbert_soetanto.jpg",
+    "circleProfile": "images/team/index-profiles/wilbert_soetanto.jpg",
+    "description": "<p>A passionate and resourceful individual, and Dreamlink Studio's Development Team Lead, taking charge over a team of highly skilled developers, ensuring timely and quality deliverables. Wilbert finished his high school in Indonesia, earned his Diploma in Mechatronics Engineering in Singapore, and completed his Bachelor of Business Information Systems with Games Development Minor in Australia. He experienced working with people from a plethora of cultural backgrounds, and is huge enthusiast of consumer electronics, and Japanese music and anime. He spends his free time doing research of any random topics on the internet.</p>",
+    "role": "Lead Developer",
+    "roleDetail": "App Developer"
+  },
+  {
+    "id": "harrison-verrios", 
+    "fullName": "Harrison Verrios",
+    "firstName": "Harrison",
+    "linkedin": "https://www.linkedin.com/in/harrison-verrios/",
+    "aboutProfile": "images/team/about-profiles/harrison_verrios.jpg",
+    "circleProfile": "images/team/index-profiles/harrison_verrios.jpg",
+    "description": "<p>Harrison has been developing games for over eight years and has been involved in the publication of seven iOS and Android applications. He is now finishing off his bachelor's degree, majoring in astrophysics, mathematics and game development. His passion for game programming has led him to develop projects with multiple teams, with the current focus on coding Dreamlink Studio's new app, Dead Instinct, using the Unity game engine. Additionally, he is currently involved in a robotics student team at Monash University; the Monash Nova Rover team, building Mars rover analogues for an international competition run by NASA.</p>",
+    "role": "Developer",
+    "roleDetail": "App Developer"
+  },
+  {
+    "id": "nicholas-parsons", 
+    "fullName": "Nicholas Parsons",
+    "firstName": "Nicholas",
+    "linkedin": "https://www.linkedin.com/in/nick-parsons-ba006516b/",
+    "aboutProfile": "images/team/about-profiles/nicholas_parsons.jpg",
+    "circleProfile": "images/team/index-profiles/nicholas_parsons.jpg",
+    "description": "<p>Nick has recently just finished his Bachelor of Computer Science where he specialised in Advanced Computer Science. During his time at University, Nick developed a strong passion for web-based technologies. Nick has put his passion and skills to use by taking on the role of lead web-developer, where he built and helped design Dreamlink Studio’s website. While at Dreamlink Studio, Nick has also worked with the UI/UX team to help create user-interfaces for our applications. When he is not coding, Nick enjoys to watch Netflix, or, if it’s winter, he enjoys to head up to the snow for a ski.</p>",
+    "role": "Developer",
+    "roleDetail": "Web Developer & UI/UX"
+  },
+  {
+    "id": "jeffrey-goh", 
+    "fullName": "Jeffrey Goh",
+    "firstName": "Jeffrey",
+    "linkedin": "https://www.linkedin.com/in/jeffrey-goh-20479770/",
+    "aboutProfile": "images/team/about-profiles/jeffrey_goh.jpg",
+    "circleProfile": "images/team/index-profiles/jeffrey_goh.jpg",
+    "description": "<p class='mb-0 d-md-block d-inline'>When he's not building or testing out rhythm game controller pads, Jeffrey loves to find the humor in this weird world that we live in. He strives to provide a different point of view to make others think about how things could be done better and more efficient. Watch out though, he's always armed with a wild set of ideas to load a cannon with, mostly to try and hit the broad side of a barn. Other than indulging reality, Jeffrey specializes in design work, UI and UX implementation, coding, and moderation.</p><p class='mt-0 d-md-block d-inline'>He is the one you can trust if you need something done off the cuff.</p>",
+    "role": "Developer",
+    "roleDetail": "App Developer & UI/UX"
   }
 ]

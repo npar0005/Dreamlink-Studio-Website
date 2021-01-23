@@ -31,30 +31,28 @@
   </div>
 </section>
 
-
-
 <section class="out-people">
   <h1 class="display-5 text-center font-weight-light text-capitalize">Our people</h1>
   <div class="container">
     {{#each teamData}}
-    <div 
-      class="profile-row d-inline-flex row my-4 {{#ifOdd @index }}text-lg-right text-left flex-row-reverse{{/ifOdd}}" 
-      data-aos="{{#ifOdd @index }}fade-left{{else}}fade-right{{/ifOdd}}" 
-      data-aos-once="true" 
-      data-aos-mirror="false">
-      <div class="d-flex col-lg-2 align-items-center justify-content-center">
-        <figure class="img-container text-lg-left text-center my-0">
-          <img src="{{this.aboutProfile}}" class="profile-image img-fluid" alt="{{this.fullName}}'s Profile Image" loading="lazy" />
-          <figcaption class="socials">
-            <a href="{{this.linkedin}}" rel="noopener" target="_blank" title="Click to view {{this.firstName}}'s LinkedIn profile"><i class="icon fab fa-linkedin"></i></a>
-          </figcaption>
-        </figure>
+      <div 
+        class="profile-row d-inline-flex row my-4 {{#ifOdd @index }}text-lg-right text-left flex-row-reverse{{/ifOdd}}" 
+        data-aos="{{#ifOdd @index }}fade-left{{else}}fade-right{{/ifOdd}}" 
+        data-aos-once="true" 
+        data-aos-mirror="false">
+        <div class="d-flex col-lg-2 align-items-center justify-content-center">
+          <figure class="img-container text-lg-left text-center my-0">
+            <img src="{{this.aboutProfile}}" class="profile-image img-fluid" alt="{{this.fullName}}'s Profile Image" loading="lazy" />
+            <figcaption class="socials">
+              <a href="{{this.linkedin}}" rel="noopener" target="_blank" title="Click to view {{this.firstName}}'s LinkedIn profile"><i class="icon fab fa-linkedin"></i></a>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-lg-10 mt-4 mt-lg-0" id="{{this.id}}">
+          <h4 class="capitalize">{{this.fullName}}</h4>
+          {{{this.description}}}
+        </div>
       </div>
-      <div class="col-lg-10 mt-4 mt-lg-0" id="{{this.id}}">
-        <h4 class="capitalize">{{this.fullName}}</h4>
-        {{{this.description}}}
-      </div>
-    </div>
     {{/each}}
   </div> <!-- End container -->
 </section>

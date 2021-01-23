@@ -15,5 +15,8 @@ module.exports = {
   },
   ifOdd(conditional, options) {
     return (conditional % 2 !== 0) ? options.fn(this) : options.inverse(this);
+  },
+  calcAOSDelay(i) {
+    return 100 + i*200;
   }
 }
