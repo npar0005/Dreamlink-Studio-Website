@@ -12,5 +12,8 @@ module.exports = {
   },
   ifEquals(arg1, arg2, options) {
     return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+  },
+  ifOdd(conditional, options) {
+    return (conditional % 2 !== 0) ? options.fn(this) : options.inverse(this);
   }
 }

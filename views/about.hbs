@@ -31,171 +31,30 @@
   </div>
 </section>
 
-<!-- Image ratio: 212 × 238 (w x h) -->
-<section class="our-people">
+
+
+<section class="out-people">
   <h1 class="display-5 text-center font-weight-light text-capitalize">Our people</h1>
   <div class="container">
-
-    <div class="profile-row d-inline-flex row my-4" data-aos="fade-right" data-aos-once="true" data-aos-mirror="false">
+    {{#each teamData}}
+    <div 
+      class="profile-row d-inline-flex row my-4 {{#ifOdd @index }}text-lg-right text-left flex-row-reverse{{/ifOdd}}" 
+      data-aos="{{#ifOdd @index }}fade-left{{else}}fade-right{{/ifOdd}}" 
+      data-aos-once="true" 
+      data-aos-mirror="false">
       <div class="d-flex col-lg-2 align-items-center justify-content-center">
-        <!-- 210 x 235 (ie: width*1.12 ratio)-->
         <figure class="img-container text-lg-left text-center my-0">
-          <img src="images/team/about-profiles/harrison_verrios.jpg" class="profile-image img-fluid" alt="Harrison Verrios's Profile Image" loading="lazy" />
+          <img src="{{this.aboutProfile}}" class="profile-image img-fluid" alt="{{this.fullName}}'s Profile Image" loading="lazy" />
           <figcaption class="socials">
-            <a href="https://www.linkedin.com/in/harrison-verrios/" rel="noopener" target="_blank" title="Click to view Harrison's LinkedIn profile"><i class="icon fab fa-linkedin"></i></a>
+            <a href="{{this.linkedin}}" rel="noopener" target="_blank" title="Click to view {{this.firstName}}'s LinkedIn profile"><i class="icon fab fa-linkedin"></i></a>
           </figcaption>
         </figure>
       </div>
-      <div class="col-lg-10 mt-4 mt-lg-0" id="harrison-verrios">
-        <h4 class="capitalize">Harrison Verrios</h4>
-        <p>
-          Harrison has been developing games for over eight years and has been involved in the publication of seven iOS and Android applications. He is now finishing off his bachelor's degree, majoring in astrophysics, mathematics and game development. His passion for game programming has led him to develop projects with multiple teams, with the current focus on coding Dreamlink's new app, Dead Instinct, using the Unity game engine. Additionally, he is currently involved in a robotics student team at Monash University; the Monash Nova Rover team, building Mars rover analogues for an international competition run by NASA.
-        </p>
+      <div class="col-lg-10 mt-4 mt-lg-0" id="{{this.id}}">
+        <h4 class="capitalize">{{this.fullName}}</h4>
+        {{{this.description}}}
       </div>
     </div>
-
-    <div class="profile-row d-inline-flex row my-4 text-lg-right text-left flex-row-reverse" data-aos="fade-left" data-aos-once="true" data-aos-mirror="false">
-      <div class="d-flex col-lg-2 align-items-center justify-content-center">
-        <figure class="img-container text-lg-left text-center my-0">
-          <img src="images/team/about-profiles/jeffrey_goh.jpg" class="profile-image img-fluid" alt="Jeffrey Goh's Profile Image" loading="lazy"/>
-          <figcaption class="socials">
-            <a href="https://www.linkedin.com/in/jeffrey-goh-20479770/" rel="noopener" target="_blank" title="Click to view Jeffrey's LinkedIn profile"><i class="icon fab fa-linkedin"></i></a>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-lg-10 mt-4 mt-lg-0" id="jeffrey-goh">
-        <h4 class="capitalize">Jeffrey Goh</h4>
-        <p class="mb-0 d-md-block d-inline">
-          When he's not building or testing out rhythm game controller pads, Jeffrey loves to find the humor in this weird world that we live in. He strives to provide a different point of view to make others think about how things could be done better and more efficient. Watch out though, he's always armed with a wild set of ideas to load a cannon with, mostly to try and hit the broad side of a barn. Other than indulging reality, Jeffrey specializes in design work, UI and UX implementation, coding, and moderation. 
-        </p>
-        <p class="mt-0 d-md-block d-inline">
-          He is the one you can trust if you need something done off the cuff.
-        </p>
-      </div>
-    </div>
-
-    <div class="profile-row d-inline-flex row my-4" data-aos="fade-right" data-aos-once="true" data-aos-mirror="false">
-      <div class="d-flex col-lg-2 align-items-center justify-content-center">
-        <!-- 210 x 235 (ie: width*1.12 ratio)-->
-        <figure class="img-container text-lg-left text-center my-0">
-          <img src="images/team/about-profiles/nicholas_parsons.jpg" class="profile-image img-fluid" alt="Nicholas Parsons's Profile Image" loading="lazy" />
-          <figcaption class="socials">
-            <a href="https://www.linkedin.com/in/nick-parsons-ba006516b/" rel="noopener" target="_blank" title="Click to view Nick's LinkedIn profile"><i class="icon fab fa-linkedin"></i></a>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-lg-10 mt-4 mt-lg-0" id="nicholas-parsons">
-        <h4 class="capitalize">Nicholas Parsons</h4>
-        <p>
-          Nick has recently just finished his Bachelor of Computer Science where he specialised in Advanced Computer Science. During his time at University, Nick developed a strong passion for web-based technologies. Nick has put his passion and skills to use by taking on the role of lead web-developer, where he built and helped design Dreamlink’s website. While at Dreamlink, Nick has also worked with the UI/UX team to help create user-interfaces for our applications. When he is not coding, Nick enjoys to watch Netflix, or, if it’s winter, he enjoys to head up to the snow for a ski. 
-        </p>
-      </div>
-    </div>
-
-    <div class="profile-row d-inline-flex row my-4 text-lg-right text-left flex-row-reverse" data-aos="fade-left" data-aos-once="true" data-aos-mirror="false">
-      <div class="d-flex col-lg-2 align-items-center justify-content-center">
-        <figure class="img-container text-lg-left text-center my-0">
-          <img src="images/team/about-profiles/wilbert_soetanto.jpg" class="profile-image img-fluid" alt="Wilbert Soetanto Profile Image" loading="lazy" />
-          <figcaption class="socials">
-            <a href="https://www.linkedin.com/in/wilbert-soetanto/" rel="noopener" target="_blank" title="Click to view Willbert's LinkedIn profile"><i class="icon fab fa-linkedin"></i></a>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-lg-10 mt-4 mt-lg-0" id="wilbert-soetanto">
-        <h4 class="capitalize">Wilbert Soetanto</h4>
-        <p>
-          A passionate and resourceful individual, and Dreamlink Studio's Development Team Lead, taking charge over a team of highly skilled developers, ensuring timely and quality deliverables. Wilbert finished his high school in Indonesia, earned his Diploma in Mechatronics Engineering in Singapore, and completed his Bachelor of Business Information Systems with Games Development Minor in Australia. He experienced working with people from a plethora of cultural backgrounds, and is huge enthusiast of consumer electronics, and Japanese music and anime. He spends his free time doing research of any random topics on the internet.
-        </p>
-      </div>
-    </div>
-
-
-
-    <div class="profile-row d-inline-flex row my-4" data-aos="fade-right" data-aos-once="true" data-aos-mirror="false">
-      <div class="d-flex col-lg-2 align-items-center justify-content-center">
-        <!-- 210 x 235 (ie: width*1.12 ratio)-->
-        <figure class="img-container text-lg-left text-center my-0">
-          <img src="images/team/about-profiles/matthew-szehao-ong.jpg" class="profile-image img-fluid" alt="Matthew SzeHao Ong's Profile Image" loading="lazy"/>
-          <figcaption class="socials">
-            <a href="https://www.linkedin.com/in/matthew-szehao-ong" rel="noopener" target="_blank" title="Click to view Matthew's LinkedIn profile"><i class="icon fab fa-linkedin"></i></a>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-lg-10 mt-4 mt-lg-0" id="matthew-szehao-ong">
-        <h4 class="capitalize">Matthew Ong</h4>
-        <p>
-          Matthew has experience as an analyst in the credit industry, specialising in automation & data-driven areas. He has a background in business technology and software development and is a serial entrepreneur. At Dreamlink Studio, Matthew focuses on ensuring that our teams strive to operate at the highest possible levels of efficiency while ensuring that we stay within our project constraints. He passionately believes in creating an environment for his team to develop innovative products that will be enjoyed and have an impact on the community.
-        </p>
-      </div>
-    </div>
-
-    <div class="profile-row d-inline-flex row my-4 text-lg-right text-left flex-row-reverse" data-aos="fade-left" data-aos-once="true" data-aos-mirror="false">
-      <div class="d-flex col-lg-2 align-items-center justify-content-center">
-        <figure class="img-container text-lg-left text-center my-0">
-          <img src="images/team/about-profiles/justine_chen.jpg" class="profile-image img-fluid" alt="Justine Chen's Profile Image" />
-          <figcaption class="socials">
-            <a href="https://www.linkedin.com/in/justine-chen-140803182/" rel="noopener" target="_blank" title="Click to view Justine's LinkedIn profile">
-              <i class="icon fab fa-linkedin"></i>
-            </a>
-          </figcaption>
-        </figure>
-      </div>
-      
-
-      <div class="col-lg-10 mt-4 mt-lg-0" id="justine_chen">
-        <h4 class="capitalize">Justine Chen</h4>
-        <p>
-          At Dreamlink Justine leads the UI/UX team and is also a member of the graphics team.
-          She is currently a student studying Commerce (Marketing) and IT (Business information systems). This is her first project in UI & graphics design and her first time learning about and doing 3D modelling, where she taught herself how to use Maya mainly with the help of YouTube. Justine is interested in design and creativity as it allows her imagination to come to life. She is striving towards a career in UI/UX and brand design. 
-          In her spare time Justine likes to shop (window shop :P), try new food & watch movies.
-          She also has the cutest golden retriever puppy (Kirby) which is secretly the 9th member of the team.
-        </p>
-      </div>
-    </div>
-
-  
-
-    <div class="profile-row d-inline-flex row my-4" data-aos="fade-right" data-aos-once="true" data-aos-mirror="false">
-      <div class="d-flex col-lg-2 align-items-center justify-content-center">
-        <!-- 210 x 235 (ie: width*1.12 ratio)-->
-        <figure class="img-container text-lg-left text-center my-0">
-          <img src="images/team/about-profiles/summer_chong.jpg" class="profile-image img-fluid" alt="Summer Chong's Profile Image" />
-          <figcaption class="socials">
-            <a href="http://www.linkedin.com/in/summer-soktengchong" rel="noopener" target="_blank" title="Click to view Summer's LinkedIn profile">
-              <i class="icon fab fa-linkedin"></i>
-            </a>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-lg-10 mt-4 mt-lg-0" id="summer_chong">
-        <h4 class="capitalize">Summer Chong</h4>
-        <p>
-          Team lead of graphic team, allocating works and task to member of the graphic team. She discovered she passion for graphic after those long nights she pulled for doing graphic assignments during university although her role as a team lead question her creativity level, but she believes in her team that they will always pull through. 
-          She also encourages her teammates to explore different ways to get their work done because she thinks arts is all about exploring.
-          The only thing she likes to do when she is free is looking for good treats (especially the sweet kind). 
-        </p>
-      </div>
-    </div>
-
-    <div class="profile-row d-inline-flex row my-4 text-lg-right text-left flex-row-reverse" data-aos="fade-left" data-aos-once="true" data-aos-mirror="false">
-      <div class="d-flex col-lg-2 align-items-center justify-content-center">
-        <figure class="img-container text-lg-left text-center my-0">
-          <img src="images/team/about-profiles/hui_wen_poh.jpg" class="profile-image img-fluid" alt="Hui Wen Poh's Profile Image" />
-          <figcaption class="socials">
-            <a href="http://linkedin.com/in/hui-wen-poh-6bb48714b" rel="noopener" target="_blank" title="Click to view HW's LinkedIn profile">
-              <i class="icon fab fa-linkedin"></i>
-            </a>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-lg-10 mt-4 mt-lg-0" id="hui_wen_poh">
-        <h4 class="capitalize">Hui Wen Poh (HW)</h4>
-        <p>
-          HW is a mathematical person and enjoys being in the pool. She's also a chatter box and loves to immerse herself within the Chinese culture. 
-          She's not into aesthetics but she ended up in graphics. Don’t ask her how because even she doesn't know. HW is a very fresh graduate 
-          with an innocent mind and no impurities. She really likes working within a team as well as on her own.
-        </p>
-      </div>
-    </div>
-  </div>
+    {{/each}}
+  </div> <!-- End container -->
 </section>

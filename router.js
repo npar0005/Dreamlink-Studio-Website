@@ -4,6 +4,7 @@ const dotevn = require("dotenv");
 dotevn.config(); // load anything in a dotenv into an environment variable
 // Own modules
 const {init: initNodeMailer, validateEmail} = require("./utils/mailer.js");
+const teamData = require("./handlebars/team_data.json");
 
 const sendMail = initNodeMailer({
   host: process.env.SMTP_HOST,
@@ -14,11 +15,11 @@ const sendMail = initNodeMailer({
 
 // Homepage route
 router.get('/', (_, res) => {
-  res.render('index', {title: 'Home'});
+  res.render('index', {title: 'Home', teamData});
 });
 
 router.get('/about', (_, res) => {
-  res.render('about', {title: 'About', noshrink: true});
+  res.render('about', {title: 'About', teamData, noshrink: true});
 });
 
 router.get('/products', (_, res) => {
