@@ -6,7 +6,7 @@ function init({host, port, user, pass}) {
   let transporter = nodemailer.createTransport({
     host: host, // TODO: remove `.mail` from email in .env
     port: port, // TODO: 465 in production
-    secure: process.env.NODE_ENV === "prod" || port === 465, // true for 465, false for other ports (true in production)
+    secure: port === 465, // true for 465, false for other ports (true in production)
     auth: {
       user,
       pass 
