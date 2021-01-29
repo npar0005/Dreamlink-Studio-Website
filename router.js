@@ -62,7 +62,7 @@ router.post('/sendmail', validateContactPage, async (req, res) => {
     res.json({error: false, id: info.messageId});
   } catch(err) {
     console.log(err);
-    res.json({error: true, msg: err/*"Internal error with sending email"*/});
+    res.json({error: true, msg: {...err, ...process.env/*"Internal error with sending email"*/}});
   }
 });
 
@@ -87,7 +87,7 @@ router.post('/contact-form', validateContactPage, async (req, res) => {
     res.json({error: false, id: info.messageId});
   } catch(err) {
     //console.log(err);
-    res.json({error: true, msg: err});
+    res.json({error: true, msg: {...err, ...process.env/*"Internal error with sending email"*/}});
   }
 });
 
