@@ -93,7 +93,7 @@
     <!-- Our team carousel -->
     <div class="owl-profile-carousel owl-carousel owl-theme">
       {{#each teamData}}
-        <div class="item flip-card" data-aos="zoom-in-up" data-aos-delay="{{calcAOSDelay @index}}" data-aos-easing="ease-out-back">
+        <div class="item flip-card" data-aos="zoom-in-up" data-aos-delay="{{calcAOSDelay @index}}" data-aos-once="true" data-aos-easing="ease-out-back">
           <div class="member-info flip-card-inner">
             <div class="flip-card-front">
               <img src="{{this.circleProfile}}" class="circle-img" alt="{{this.fullName}}" loading="lazy" />
