@@ -9,6 +9,7 @@ const teamData = require("./handlebars/team_data.json");
 const sendMail = initNodeMailer({
   host: process.env.SMTP_HOST,
   port: +process.env.EMAIL_PORT,
+  secure: process.env.SECURE === "true",
   user: process.env.EMAIL_ADDR,
   pass: process.env.EMAIL_PASS
 });
