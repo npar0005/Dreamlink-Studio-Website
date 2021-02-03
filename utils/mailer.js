@@ -12,7 +12,7 @@ function init({host, port, user, pass}) {
       pass 
     },
     // TSL Remove in production
-    ...(process.env.NODE_ENV === "prod" || {tls: {
+    ...(process.env.NODE_ENV === "production" || {tls: {
       rejectUnauthorized: false
     }})
   });
