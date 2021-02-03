@@ -53,8 +53,7 @@ router.post('/sendmail', validateContactPage, async (req, res) => {
   try {
     const {firstName, lastName, email, emailBody} = req.body;
     const info = await sendMail({
-      /*from: `Website Contact Form 🌙 <${process.env.EMAIL_ADDR}>`,*/
-      from: process.env.EMAIL_ADDR,
+      from: `Website Contact Form 🌙 <${process.env.EMAIL_ADDR}>`,
       to: process.env.EMAIL_ADDR,
       bcc: email,
       subject: `Website query from ${firstName} ${lastName}`,
@@ -64,7 +63,7 @@ router.post('/sendmail', validateContactPage, async (req, res) => {
     res.json({error: false, id: info.messageId});
   } catch(err) {
     console.log(err);
-    res.json({error: true, msg: "Internal error with sending email", err});
+    res.json({error: true, msg: "Internal error with sending email"});
   }
 });
 
